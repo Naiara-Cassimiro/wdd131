@@ -35,11 +35,15 @@ header h1 {
 #course-title {
     display: block;
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    padding: 1rem;
     font-size: 2rem;
     font-weight: 700;
-    color: white;
-    padding: 1.5rem;
+}
+
+#course-title span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 /* NAVIGATION */
