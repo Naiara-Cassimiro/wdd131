@@ -8,7 +8,7 @@
     <title>WDD 131 – Fundamentos da Web Dinâmica - Naiara Cassimiro</title>
 
     <meta name="description"
-        content="WDD 131 – Fundamentos da Web Dinâmica. Naiara Cassimiro. Página inicial do curso com informações pessoais, país de origem, recursos úteis e projetos web.">
+        content="WDD 131 – Fundamentos da Web Dinâmica. Naiara Cassimiro. HTML, CSS, JavaScript, desenvolvimento web, página inicial do curso, informações pessoais e Brasil.">
 
     <meta name="author" content="Naiara Cassimiro">
 
@@ -16,6 +16,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
@@ -26,9 +27,10 @@
 <body>
 
     <header>
-        <h1>
+
+        <span id="course-title">
             WDD 131 – Fundamentos da Web Dinâmica
-        </h1>
+        </span>
 
         <nav>
             <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
@@ -46,47 +48,64 @@
 
     <main>
 
-        <h2>Naiara Cassimiro</h2>
+        <h1>Naiara Cassimiro</h1>
 
         <section class="card">
-            <h3>Sobre Mim</h3>
+
+            <h2>Sobre Mim</h2>
 
             <div class="card-content">
+
                 <img src="imagens/perfil.jpg" alt="Foto de Naiara Cassimiro">
 
                 <p>
-                    Meu nome é Naiara Cassimiro e moro no Brasil. Atualmente estudo
-                    desenvolvimento web e busco ampliar meus conhecimentos em HTML,
-                    CSS e JavaScript. Também participo de atividades missionárias e
-                    gosto de aprender novas tecnologias para aplicar em projetos
-                    pessoais e profissionais.
+                    Meu nome é Naiara Cassimiro e moro no Brasil.
+                    Atualmente estudo desenvolvimento web pela BYU–Idaho
+                    e estou aprimorando meus conhecimentos em HTML, CSS
+                    e JavaScript.
+
+                    Também participo de atividades missionárias e gosto
+                    de utilizar a tecnologia para servir outras pessoas,
+                    criar projetos úteis e desenvolver novas habilidades
+                    profissionais.
                 </p>
+
             </div>
+
         </section>
 
         <section class="card">
-            <h3>Brasil</h3>
+
+            <h2>Brasil</h2>
 
             <div class="card-content">
+
                 <img src="imagens/brasil.jpg" alt="Bandeira do Brasil">
 
                 <p>
-                    O Brasil é o maior país da América do Sul e possui uma rica
-                    diversidade cultural. É conhecido por suas belas paisagens,
-                    culinária variada e pela hospitalidade de seu povo. O idioma
-                    oficial é o português.
+                    O Brasil é o maior país da América do Sul e possui
+                    uma rica diversidade cultural. É conhecido por suas
+                    belas paisagens naturais, culinária variada,
+                    hospitalidade de seu povo e por ter o português
+                    como idioma oficial.
                 </p>
+
             </div>
+
         </section>
 
     </main>
 
     <footer>
+
         <p>
-            &copy; <span id="anoatual"></span> | Naiara Cassimiro | Brasil
+            &copy;
+            <span id="anoatual"></span>
+            | Naiara Cassimiro | Brasil
         </p>
 
         <p id="ultimaModificacao"></p>
+
     </footer>
 
 </body>
