@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Álbum do Templo | WDD 131</title>
+
+    <meta name="description"
+        content="Galeria responsiva de templos desenvolvida com HTML, CSS e JavaScript para a atividade S02 do curso WDD 131.">
+
+    <meta name="author" content="Naiara Cristina">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/templos.css">
+    <link rel="stylesheet" href="estilos/templos-grandes.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/templos.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+
+        <h2>Álbum do Templo</h2>
+
+        <button id="menu" aria-label="Abrir ou fechar menu">
+            ☰
+        </button>
+
+        <nav class="navigation">
+
+            <a href="#">Página Inicial</a>
+            <a href="#">Antigo</a>
+            <a href="#">Novo</a>
+            <a href="#">Grande</a>
+            <a href="#">Pequeno</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Álbum do Templo</h1>
+
+        <section class="gallery">
+
+            <figure>
+                <img src="imagens/templo de campinas.webp" alt="Templo de Campinas, Brasil" loading="lazy" width="400"
+                    height="250">
+                <figcaption>Templo de Campinas</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo de colombia.webp" alt="Templo de Bogotá, Colômbia" loading="lazy" width="400"
+                    height="250">
+                <figcaption>Templo da Colômbia</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo de coreia.webp" alt="Templo de Seul, Coreia do Sul" loading="lazy" width="400"
+                    height="250">
+                <figcaption>Templo da Coreia</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo de madri.webp" alt="Templo de Madri, Espanha" loading="lazy" width="400"
+                    height="250">
+                <figcaption>Templo de Madri</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo de mexico.webp" alt="Templo da Cidade do México, México" loading="lazy"
+                    width="400" height="250">
+                <figcaption>Templo do México</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo de panama.webp" alt="Templo da Cidade do Panamá, Panamá" loading="lazy"
+                    width="400" height="250">
+                <figcaption>Templo do Panamá</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo de salvador.webp" alt="Templo de Salvador, Brasil" loading="lazy" width="400"
+                    height="250">
+                <figcaption>Templo de Salvador</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo de samoa.webp" alt="Templo de Apia, Samoa" loading="lazy" width="400"
+                    height="250">
+                <figcaption>Templo de Samoa</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/tempo de sao paulo.webp" alt="Templo de São Paulo, Brasil" loading="lazy" width="400"
+                    height="250">
+                <figcaption>Templo de São Paulo</figcaption>
+            </figure>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            🌸 Naiara Cristina | Brasil 🌸
+        </p>
+
+        <p>
+            Última modificação:
+            <span id="lastmodified"></span>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

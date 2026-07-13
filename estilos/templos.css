@@ -1,0 +1,187 @@
+/* ==========================================
+   WDD 131 - S02 Álbum de Templos
+   Arquivo: templos.css
+   Mobile First
+========================================== */
+
+/* Google Fonts
+   Títulos: Montserrat
+   Texto: Roboto
+*/
+
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Variáveis ---------- */
+
+:root {
+    --primary-color: #1d3557;
+    --secondary-color: #457b9d;
+    --accent-color: #f4a261;
+    --background-color: #f8f9fa;
+    --text-color: #333333;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Body ---------- */
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+}
+
+/* ---------- Botão Hambúrguer ---------- */
+
+#menu {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* ---------- Navegação ---------- */
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    color: var(--white);
+    text-decoration: none;
+    padding: .9rem;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.2);
+
+    transition: background-color .3s;
+}
+
+.navigation a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ---------- Main ---------- */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin: 1rem 0 2rem;
+    color: var(--primary-color);
+}
+
+/* ---------- Galeria ---------- */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+
+    box-shadow: 0 2px 8px var(--shadow);
+
+    transition: transform .3s ease,
+                box-shadow .3s ease;
+}
+
+figure:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: .9rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: .4rem 0;
+}
+
+/* ---------- Melhorias de Acessibilidade ---------- */
+
+a:focus,
+button:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ---------- Menu Aberto ---------- */
+
+header.open {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+header.open #menu {
+    align-self: flex-end;
+}
