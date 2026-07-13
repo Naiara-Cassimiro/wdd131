@@ -4,11 +4,6 @@
    Mobile First
 ========================================== */
 
-/* Google Fonts
-   Títulos: Montserrat
-   Texto: Roboto
-*/
-
 /* ---------- Reset ---------- */
 
 * {
@@ -45,6 +40,7 @@ header {
     color: var(--white);
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -54,6 +50,13 @@ header {
 header h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;
+}
+
+#course-title {
+    width: 100%;
+    text-align: center;
+    margin-top: .5rem;
+    font-size: .95rem;
 }
 
 /* ---------- Botão Hambúrguer ---------- */
@@ -68,28 +71,29 @@ header h2 {
 
 /* ---------- Navegação ---------- */
 
-.navigation {
+nav.navigation {
     display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
 }
 
-.navigation.open {
+nav.navigation.open {
     display: flex;
 }
 
-.navigation a {
+nav.navigation a {
     color: var(--white);
     text-decoration: none;
-    padding: .9rem;
     text-align: center;
-    border-top: 1px solid rgba(255,255,255,.2);
+    padding: .9rem;
 
-    transition: background-color .3s;
+    border-top: 1px solid rgba(255,255,255,.25);
+
+    transition: background-color .3s ease;
 }
 
-.navigation a:hover {
+nav.navigation a:hover {
     background-color: var(--accent-color);
     color: var(--primary-color);
     font-weight: bold;
@@ -105,9 +109,9 @@ main {
 
 main h1 {
     font-family: "Montserrat", sans-serif;
+    color: var(--primary-color);
     text-align: center;
     margin: 1rem 0 2rem;
-    color: var(--primary-color);
 }
 
 /* ---------- Galeria ---------- */
@@ -119,7 +123,7 @@ main h1 {
 }
 
 figure {
-    background: var(--white);
+    background-color: var(--white);
     border-radius: 8px;
     overflow: hidden;
 
@@ -141,10 +145,10 @@ figure img {
 }
 
 figcaption {
-    padding: .9rem;
     text-align: center;
-    font-weight: 600;
+    padding: .9rem;
     color: var(--primary-color);
+    font-weight: 600;
 }
 
 /* ---------- Footer ---------- */
@@ -160,10 +164,19 @@ footer {
 }
 
 footer p {
-    margin: .4rem 0;
+    margin: .5rem 0;
 }
 
-/* ---------- Melhorias de Acessibilidade ---------- */
+footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Acessibilidade ---------- */
 
 a:focus,
 button:focus {
@@ -173,6 +186,7 @@ button:focus {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 /* ---------- Menu Aberto ---------- */

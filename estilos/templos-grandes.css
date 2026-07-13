@@ -12,11 +12,19 @@
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: center;
+        gap: 1rem;
         padding: 1rem 2rem;
     }
 
     header h2 {
         font-size: 2rem;
+        margin: 0;
+    }
+
+    #course-title {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin: .5rem 0 1rem;
     }
 
     /* ---------- Botão Hambúrguer ---------- */
@@ -27,42 +35,47 @@
 
     /* ---------- Navegação ---------- */
 
-    .navigation {
+    nav.navigation {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-        gap: .5rem;
+        width: auto;
         margin-top: 0;
+        gap: .5rem;
     }
 
-    .navigation a {
+    nav.navigation a {
         border: none;
-        padding: .75rem 1rem;
         border-radius: 5px;
-    }
-
-    /* ---------- Galeria ---------- */
-
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-
-    figure img {
-        height: 250px;
-        object-fit: cover;
+        padding: .75rem 1rem;
     }
 
     /* ---------- Main ---------- */
 
     main {
+        max-width: 1100px;
+        margin: 0 auto;
         padding: 2rem;
     }
 
     main h1 {
         font-size: 2.2rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* ---------- Galeria ---------- */
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    figure img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
     }
 
     /* ---------- Footer ---------- */

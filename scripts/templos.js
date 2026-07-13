@@ -1,45 +1,87 @@
 /* ==========================================
    WDD 131 - S02 Álbum de Templos
-   Arquivo: templos.js
+   Arquivo: templos-grandes.css
+   Layout para telas maiores
 ========================================== */
 
-// ==============================
-// Ano Atual
-// ==============================
+@media screen and (min-width: 768px) {
 
-const currentYear = document.querySelector("#currentyear");
+    /* ---------- Header ---------- */
 
-currentYear.textContent = new Date().getFullYear();
-
-
-// ==============================
-// Última Modificação
-// ==============================
-
-const lastModified = document.querySelector("#lastmodified");
-
-lastModified.textContent = document.lastModified;
-
-
-// ==============================
-// Menu Hambúrguer
-// ==============================
-
-const menuButton = document.querySelector("#menu");
-const navigation = document.querySelector(".navigation");
-const header = document.querySelector("header");
-
-menuButton.addEventListener("click", () => {
-
-    navigation.classList.toggle("open");
-    header.classList.toggle("open");
-
-    if (navigation.classList.contains("open")) {
-        menuButton.textContent = "✖";
-        menuButton.setAttribute("aria-label", "Fechar menu");
-    } else {
-        menuButton.textContent = "☰";
-        menuButton.setAttribute("aria-label", "Abrir menu");
+    header {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 2rem;
     }
 
-});
+    header h2 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    #course-title {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin: .5rem 0 1rem;
+    }
+
+    /* ---------- Botão Hambúrguer ---------- */
+
+    #menu {
+        display: none;
+    }
+
+    /* ---------- Navegação ---------- */
+
+    nav.navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: auto;
+        margin-top: 0;
+        gap: .5rem;
+    }
+
+    nav.navigation a {
+        border: none;
+        border-radius: 5px;
+        padding: .75rem 1rem;
+    }
+
+    /* ---------- Main ---------- */
+
+    main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    main h1 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* ---------- Galeria ---------- */
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    figure img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    /* ---------- Footer ---------- */
+
+    footer {
+        font-size: 1rem;
+    }
+
+}
