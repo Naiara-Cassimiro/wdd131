@@ -1,87 +1,79 @@
 /* ==========================================
    WDD 131 - S02 Álbum de Templos
-   Arquivo: templos-grandes.css
-   Layout para telas maiores
+   Arquivo: templos.js
 ========================================== */
 
-@media screen and (min-width: 768px) {
 
-    /* ---------- Header ---------- */
+// ==========================================
+// Ano Atual
+// ==========================================
 
-    header {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        align-items: center;
-        gap: 1rem;
-        padding: 1rem 2rem;
-    }
+const currentYear = document.querySelector("#currentyear");
 
-    header h2 {
-        font-size: 2rem;
-        margin: 0;
-    }
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
 
-    #course-title {
-        grid-column: 1 / -1;
-        text-align: center;
-        margin: .5rem 0 1rem;
-    }
 
-    /* ---------- Botão Hambúrguer ---------- */
+// ==========================================
+// Última Modificação com Data e Hora
+// ==========================================
 
-    #menu {
-        display: none;
-    }
+const lastModified = document.querySelector("#lastmodified");
 
-    /* ---------- Navegação ---------- */
+if (lastModified) {
 
-    nav.navigation {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        width: auto;
-        margin-top: 0;
-        gap: .5rem;
-    }
+    const dateModified = new Date(document.lastModified);
 
-    nav.navigation a {
-        border: none;
-        border-radius: 5px;
-        padding: .75rem 1rem;
-    }
+    lastModified.textContent =
+        `${dateModified.toLocaleDateString("pt-BR")} ${dateModified.toLocaleTimeString("pt-BR")}`;
 
-    /* ---------- Main ---------- */
+}
 
-    main {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
 
-    main h1 {
-        font-size: 2.2rem;
-        margin-bottom: 2rem;
-    }
+// ==========================================
+// Menu Hambúrguer
+// ==========================================
 
-    /* ---------- Galeria ---------- */
+const menuButton = document.querySelector("#menu");
+const navigation = document.querySelector(".navigation");
 
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
 
-    figure img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
+if (menuButton && navigation) {
 
-    /* ---------- Footer ---------- */
 
-    footer {
-        font-size: 1rem;
-    }
+    menuButton.addEventListener("click", () => {
+
+
+        navigation.classList.toggle("open");
+
+
+        if (navigation.classList.contains("open")) {
+
+
+            menuButton.textContent = "✖";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Fechar menu"
+            );
+
+
+        } else {
+
+
+            menuButton.textContent = "☰";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Abrir menu"
+            );
+
+
+        }
+
+
+    });
+
 
 }
