@@ -1,4 +1,4 @@
-```javascript
+javascript
 // ===============================
 // Rodapé
 // ===============================
@@ -54,4 +54,4 @@ if (temperatura <= 10 && velocidadeVento > 4.8) {
 } else {
     windChill.textContent = "N/A";
 }
-```
+
