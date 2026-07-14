@@ -10,38 +10,40 @@
     <meta name="description" content="Página sobre a Coreia do Sul desenvolvida para a atividade WDD 131.">
     <meta name="author" content="Naiara Cassimiro">
 
-    <link rel="stylesheet" href="styles/local.css">
-    <link rel="stylesheet" href="styles/local-large.css">
+    <link rel="stylesheet" href="estilos/local.css">
+    <link rel="stylesheet" href="estilos/local-large.css">
 
     <script src="scripts/local.js" defer></script>
+
+
 </head>
 
 <body>
 
     <header>
-        <h1>🇰🇷 Coreia do Sul</h1>
+        <h1>Coreia do Sul</h1>
     </header>
 
     <main>
 
         <!-- Imagem Principal -->
+
         <section class="hero">
 
             <picture>
+                <source media="(min-width:768px)" srcset="imagens/hero-large.webp">
 
-                <source media="(min-width: 768px)" srcset="images/hero-large.webp">
-
-                <img src="imagens/korea-large.webp" alt="Vista da cidade de Seul, Coreia do Sul" width="1200"
-                    height="700" loading="eager">
-
+                <img src="imagens/hero-small.webp" alt="Vista da cidade de Seul, Coreia do Sul">
             </picture>
 
         </section>
 
         <!-- Conteúdo -->
+
         <section class="content">
 
             <!-- Dados -->
+
             <section class="card">
 
                 <h2>Dados</h2>
@@ -68,7 +70,8 @@
                 <h2 class="weather-title">Clima</h2>
 
                 <!-- Ícone utilizado apenas na versão mobile -->
-                <img src="imagens/weather.svg" alt="Ícone do clima" class="weather-icon">
+
+                <img src="imagens/weather.svg" alt="Ícone do clima">
 
                 <p><strong>Temperatura:</strong> 8 °C</p>
 
