@@ -1,4 +1,4 @@
-```javascript id="5k8q2m"
+```javascript
 // ===============================
 // Rodapé
 // ===============================
@@ -6,8 +6,16 @@
 const year = document.querySelector("#year");
 const lastModified = document.querySelector("#lastModified");
 
+// Exibe o ano atual
 year.textContent = new Date().getFullYear();
-lastModified.textContent = document.lastModified;
+
+// Exibe a data e a hora da última modificação
+const dataModificacao = new Date(document.lastModified);
+
+lastModified.textContent = dataModificacao.toLocaleString("pt-BR", {
+    dateStyle: "short",
+    timeStyle: "medium"
+});
 
 // ===============================
 // Dados do Clima
