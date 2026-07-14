@@ -1,16 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```css
+/* ==========================================
+   Estilos para telas maiores (Desktop)
+========================================== */
 
-    <title>Coreia do Sul | WDD 131</title>
+@media screen and (min-width: 768px) {
 
-    <meta name="description" content="Página sobre a Coreia do Sul desenvolvida para a atividade WDD 131.">
-    <meta name="author" content="Naiara Cassimiro">
+    /* Cabeçalho */
+    header h1 {
+        font-size: 2.5rem;
+    }
 
-    <link rel="stylesheet" href="styles/local.css">
-    <link rel="stylesheet" href="styles/local-large.css">
+    /* Hero */
+    .hero img {
+        max-height: 650px;
+        object-fit: cover;
+    }
 
-    <script src="scripts/local.js" defer></script>
-</head>
+    /* Layout principal */
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+
+    /* Cards */
+    .card {
+        min-height: 360px;
+    }
+
+    .card h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    .card p {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Weather */
+
+    /* Esconde o SVG no desktop */
+    .weather-icon {
+        display: none;
+    }
+
+    /* Exibe o emoji usando pseudo-elemento */
+    .weather-title::after {
+        content: " ⛅";
+        font-size: 1.5rem;
+    }
+
+    /* Rodapé */
+    footer {
+        font-size: 1rem;
+    }
+
+}
+```
