@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Coreia do Sul | WDD 131 - Página do País</title>
-
-    <meta name="description"
-        content="Conheça a Coreia do Sul, suas principais características, dados geográficos e informações sobre o clima.">
-    <meta name="author" content="Naiara Cristina">
+    <title>Brasil</title>
 
     <link rel="stylesheet" href="styles/local.css">
+    <link rel="stylesheet" href="styles/local-large.css">
 
     <script src="scripts/local.js" defer></script>
 </head>
@@ -19,64 +16,42 @@
 <body>
 
     <header>
-        <h1>Coreia do Sul</h1>
+        <h1>Brasil</h1>
     </header>
 
     <main>
 
-        <!-- Imagem Principal -->
-        <section class="hero">
+        <picture>
 
-            <picture>
+            <source media="(min-width:800px)" srcset="imagens/brasil-large.webp">
 
-                <source media="(max-width: 768px)" srcset="images/korea-small.webp">
+            <img src="imagens/brasil-small.webp" alt="Paisagem do Brasil">
 
-                <img src="images/korea-large.webp" alt="Vista da cidade de Seul, capital da Coreia do Sul"
-                    loading="lazy">
+        </picture>
 
-            </picture>
-
-        </section>
-
-        <!-- Informações do País -->
-        <section class="country-data">
+        <section class="data">
 
             <h2>Dados</h2>
 
-            <p><strong>Capital:</strong> Seul</p>
-
-            <p><strong>População:</strong> Aproximadamente 51 milhões</p>
-
-            <p><strong>Área:</strong> 100.210 km²</p>
-
-            <p><strong>Idioma:</strong> Coreano</p>
-
-            <p><strong>Moeda:</strong> Won Sul-Coreano (KRW)</p>
-
-            <p><strong>Fuso horário:</strong> UTC +9</p>
+            <p><strong>Capital:</strong> Brasília</p>
+            <p><strong>População:</strong> 203 milhões</p>
+            <p><strong>Idioma:</strong> Português</p>
+            <p><strong>Moeda:</strong> Real</p>
+            <p><strong>Área:</strong> 8.516.000 km²</p>
 
         </section>
 
-        <!-- Clima -->
         <section class="weather">
 
-            <h2 class="weather-title">
-                Clima
+            <h2>Clima</h2>
 
-                <img class="weather-icon" src="images/weather.svg" alt="Ícone representando clima parcialmente nublado">
-            </h2>
+            <img src="images/weather.svg" alt="Ícone do clima">
 
-            <p><strong>Temperatura:</strong>
-                <span id="temperature">8</span> °C
-            </p>
+            <p><strong>Temperatura:</strong> <span id="temp">8</span>°C</p>
 
-            <p><strong>Velocidade do vento:</strong>
-                <span id="wind">12</span> km/h
-            </p>
+            <p><strong>Vento:</strong> <span id="wind">6</span> km/h</p>
 
-            <p><strong>Sensação térmica:</strong>
-                <span id="windchill"></span>
-            </p>
+            <p><strong>Sensação:</strong> <span id="windchill"></span></p>
 
         </section>
 
@@ -85,15 +60,12 @@
     <footer>
 
         <p>
-            &copy;
+            ©
             <span id="currentyear"></span>
-            Naiara Cristina | Brasil
+            Brasil
         </p>
 
-        <p>
-            Última modificação:
-            <span id="lastModified"></span>
-        </p>
+        <p id="lastModified"></p>
 
     </footer>
 
