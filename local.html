@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Coreia do Sul | WDD 131</title>
+    <title>Coreia do Sul | WDD 131 - Página do País</title>
 
-    <meta name="description" content="Página sobre a Coreia do Sul desenvolvida para a atividade WDD 131.">
-    <meta name="author" content="Naiara Cassimiro">
+    <meta name="description"
+        content="Conheça a Coreia do Sul, suas principais características, dados geográficos e informações sobre o clima.">
+    <meta name="author" content="Naiara Cristina">
 
-    <link rel="stylesheet" href="estilos/local.css">
-    <link rel="stylesheet" href="estilos/local-large.css">
+    <link rel="stylesheet" href="styles/local.css">
 
     <script src="scripts/local.js" defer></script>
 </head>
@@ -26,70 +26,75 @@
 
         <!-- Imagem Principal -->
         <section class="hero">
-            <picture>
-                <source media="(min-width: 768px)" srcset="imagens/hero-large.webp">
 
-                <img src="imagens/hero-small.webp" alt="Vista da cidade de Seul, Coreia do Sul" loading="lazy">
+            <picture>
+
+                <source media="(max-width: 768px)" srcset="images/korea-small.webp">
+
+                <img src="images/korea-large.webp" alt="Vista da cidade de Seul, capital da Coreia do Sul"
+                    loading="lazy">
+
             </picture>
+
         </section>
 
-        <!-- Conteúdo -->
-        <section class="content">
+        <!-- Informações do País -->
+        <section class="country-data">
 
-            <!-- Dados -->
-            <section class="card">
-                <h2>Dados</h2>
+            <h2>Dados</h2>
 
-                <p><strong>Capital:</strong> Seul</p>
-                <p><strong>Área:</strong> 100.210 km²</p>
-                <p><strong>População:</strong> Aproximadamente 51,7 milhões de habitantes</p>
-                <p><strong>Idioma Oficial:</strong> Coreano</p>
-                <p><strong>Moeda:</strong> Won Sul-Coreano (₩)</p>
-                <p><strong>Fuso Horário:</strong> UTC +9</p>
-                <p><strong>Continente:</strong> Ásia</p>
-            </section>
+            <p><strong>Capital:</strong> Seul</p>
 
-            <!-- Clima -->
-            <section class="card weather">
+            <p><strong>População:</strong> Aproximadamente 51 milhões</p>
 
-                <h2 class="weather-title">Clima</h2>
+            <p><strong>Área:</strong> 100.210 km²</p>
 
-                <!-- Ícone exibido apenas no mobile -->
-                <img class="weather-icon" src="imagens/weather.svg" alt="Ícone do clima">
+            <p><strong>Idioma:</strong> Coreano</p>
 
-                <p>
-                    <strong>Temperatura:</strong>
-                    <span id="temperature">8 °C</span>
-                </p>
+            <p><strong>Moeda:</strong> Won Sul-Coreano (KRW)</p>
 
-                <p>
-                    <strong>Condição:</strong>
-                    <span id="condition">Parcialmente nublado</span>
-                </p>
+            <p><strong>Fuso horário:</strong> UTC +9</p>
 
-                <p>
-                    <strong>Velocidade do vento:</strong>
-                    <span id="windSpeed">10 km/h</span>
-                </p>
+        </section>
 
-                <p>
-                    <strong>Sensação térmica:</strong>
-                    <span id="windchill"></span>
-                </p>
+        <!-- Clima -->
+        <section class="weather">
 
-            </section>
+            <h2 class="weather-title">
+                Clima
+
+                <img class="weather-icon" src="images/weather.svg" alt="Ícone representando clima parcialmente nublado">
+            </h2>
+
+            <p><strong>Temperatura:</strong>
+                <span id="temperature">8</span> °C
+            </p>
+
+            <p><strong>Velocidade do vento:</strong>
+                <span id="wind">12</span> km/h
+            </p>
+
+            <p><strong>Sensação térmica:</strong>
+                <span id="windchill"></span>
+            </p>
 
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> | Naiara Cassimiro | Brasil</p>
+
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            Naiara Cristina | Brasil
+        </p>
 
         <p>
             Última modificação:
             <span id="lastModified"></span>
         </p>
+
     </footer>
 
 </body>
