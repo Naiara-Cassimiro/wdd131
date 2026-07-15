@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="estilos/local-large.css">
 
     <script src="scripts/local.js" defer></script>
-
-
 </head>
 
 <body>
@@ -27,41 +25,28 @@
     <main>
 
         <!-- Imagem Principal -->
-
         <section class="hero">
-
             <picture>
-                <source media="(min-width:768px)" srcset="imagens/hero-large.webp">
+                <source media="(min-width: 768px)" srcset="imagens/hero-large.webp">
 
-                <img src="imagens/hero-small.webp" alt="Vista da cidade de Seul, Coreia do Sul">
+                <img src="imagens/hero-small.webp" alt="Vista da cidade de Seul, Coreia do Sul" loading="lazy">
             </picture>
-
         </section>
 
         <!-- Conteúdo -->
-
         <section class="content">
 
             <!-- Dados -->
-
             <section class="card">
-
                 <h2>Dados</h2>
 
                 <p><strong>Capital:</strong> Seul</p>
-
                 <p><strong>Área:</strong> 100.210 km²</p>
-
                 <p><strong>População:</strong> Aproximadamente 51,7 milhões de habitantes</p>
-
                 <p><strong>Idioma Oficial:</strong> Coreano</p>
-
                 <p><strong>Moeda:</strong> Won Sul-Coreano (₩)</p>
-
                 <p><strong>Fuso Horário:</strong> UTC +9</p>
-
                 <p><strong>Continente:</strong> Ásia</p>
-
             </section>
 
             <!-- Clima -->
@@ -69,15 +54,23 @@
 
                 <h2 class="weather-title">Clima</h2>
 
-                <!-- Ícone utilizado apenas na versão mobile -->
+                <!-- Ícone exibido apenas no mobile -->
+                <img class="weather-icon" src="imagens/weather.svg" alt="Ícone do clima">
 
-                <img src="imagens/weather.svg" alt="Ícone do clima">
+                <p>
+                    <strong>Temperatura:</strong>
+                    <span id="temperature">8 °C</span>
+                </p>
 
-                <p><strong>Temperatura:</strong> 8 °C</p>
+                <p>
+                    <strong>Condição:</strong>
+                    <span id="condition">Parcialmente nublado</span>
+                </p>
 
-                <p><strong>Condição:</strong> Parcialmente nublado</p>
-
-                <p><strong>Velocidade do vento:</strong> 10 km/h</p>
+                <p>
+                    <strong>Velocidade do vento:</strong>
+                    <span id="windSpeed">10 km/h</span>
+                </p>
 
                 <p>
                     <strong>Sensação térmica:</strong>
