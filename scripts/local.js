@@ -1,10 +1,14 @@
-console.log("JS carregado");
-console.log(document.getElementById("lastModified"));
+// ===============================
+// Rodapé
+// ===============================
 
+// Ano atual
 const year = document.getElementById("year");
+year.textContent = new Date().getFullYear();
 
-console.log(year);
-console.log(lastModified)
+// Última modificação da página
+const lastModified = document.getElementById("lastModified");
+lastModified.textContent = document.lastModified;
 
 
 // ===============================
@@ -13,6 +17,7 @@ console.log(lastModified)
 
 const temperatura = 8;      // °C
 const velocidadeVento = 10; // km/h
+
 
 // ===============================
 // Função para calcular a sensação térmica
@@ -28,11 +33,12 @@ function calcularSensacaoTermica(temperatura, velocidadeVento) {
     );
 }
 
+
 // ===============================
 // Exibir resultado
 // ===============================
 
-const windChill = document.querySelector("#windchill");
+const windChill = document.getElementById("windchill");
 
 if (temperatura <= 10 && velocidadeVento > 4.8) {
     const sensacao = calcularSensacaoTermica(
@@ -44,4 +50,3 @@ if (temperatura <= 10 && velocidadeVento > 4.8) {
 } else {
     windChill.textContent = "N/A";
 }
-
