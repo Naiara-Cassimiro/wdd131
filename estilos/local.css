@@ -43,20 +43,26 @@ header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem 0;
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
 }
 
 /* ==========================
    Hero
 ========================== */
 
+.hero {
+    overflow: hidden;
+}
+
 .hero img {
     width: 100%;
-    height: auto;
+    height: 420px;
+    object-fit: cover;
     display: block;
 }
 
@@ -64,33 +70,32 @@ header h1 {
    Conteúdo
 ========================== */
 
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-
-    padding: 1rem;
+.content{
+    display:grid;
+    grid-template-columns:repeat(2,350px);
+    justify-content:center;
+    gap:25px;
+    margin-top:-90px;
+    position:relative;
+    z-index:5;
 }
 
 /* ==========================
    Cards
 ========================== */
 
-.card {
-    background-color: var(--card-color);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    padding: 1.5rem;
-}
-
 .card h2 {
     text-align: center;
     color: var(--secondary-color);
     margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 .card p {
-    margin-bottom: .7rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .card strong {
@@ -105,14 +110,9 @@ header h1 {
     text-align: center;
 }
 
-.weather-icon {
-    width: 70px;
-    margin-bottom: 1rem;
-}
-
-/* No mobile NÃO mostra o emoji */
-.weather-title::after {
-    content: "";
+.weather p {
+    text-align: center;
+    margin-bottom: 0.8rem;
 }
 
 /* ==========================
@@ -120,17 +120,13 @@ header h1 {
 ========================== */
 
 footer {
-    margin-top: 2rem;
-    padding: 1rem;
-
+    margin-top: 3rem;
+    padding: 1.5rem;
     background-color: var(--secondary-color);
     color: white;
-
     text-align: center;
-}
-
-footer p {
-    margin: .4rem 0;
+    font-size: 0.95rem;
+    line-height: 1.8;
 }
 
 /* ==========================

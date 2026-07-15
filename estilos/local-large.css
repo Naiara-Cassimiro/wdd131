@@ -2,7 +2,7 @@
    Estilos para telas maiores (Desktop)
 ========================================== */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) 
 
     /* Cabeçalho */
     header h1 {
@@ -16,15 +16,19 @@
     }
 
     /* Layout principal */
-    .content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+   .content {
+    display: grid;
+    grid-template-columns: repeat(2, 380px);
+    justify-content: center;
+    gap: 2rem;
 
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 2rem;
+    margin: -60px auto 2rem;
+    padding: 0 1rem;
+
+    position: relative;
+    z-index: 10;
     }
+
 
     /* Cards */
     .card {
@@ -58,6 +62,3 @@
     footer {
         font-size: 1rem;
     }
-
-}
-
