@@ -32,6 +32,7 @@ body {
     background: var(--background);
     color: var(--text);
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 /* ==========================
@@ -81,7 +82,7 @@ header h1 {
 .card {
     background: var(--light);
     border-radius: var(--radius);
-    padding: 1.5rem;
+    padding: 2rem;
     box-shadow: var(--shadow);
 }
 
@@ -103,7 +104,13 @@ header h1 {
 
 .card p {
     margin-bottom: .75rem;
+    line-height: 1.7;
 }
+
+.card strong {
+    color: var(--primary);
+}
+
 
 /* ==========================
    CLIMA

@@ -4,68 +4,93 @@
 
 @media screen and (min-width: 800px) {
 
-    /* HERO */
+    /* ==========================
+       HERO
+    ========================== */
 
     .hero img {
-    height: 550px;
+    width: 100%;
+    height: 600px;
     object-fit: cover;
-    object-position: center;
-    }
+    object-position: center 35%;
+    }    
 
-    /* CARDS */
+
+    /* ==========================
+       CONTAINER DOS CARDS
+    ========================== */
 
     .cards {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 2rem;
-
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
 
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+
         align-items: start;
     }
 
+    /* ==========================
+       CARDS
+    ========================== */
+
     .card {
-        min-height: 340px;
+        min-height: 380px;
+        padding: 2rem;
     }
 
-    /* DADOS */
+    .card p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    /* ==========================
+       DADOS
+    ========================== */
 
     .data {
         text-align: left;
     }
 
-    /* CLIMA */
+    /* ==========================
+       CLIMA
+    ========================== */
 
     .weather {
         text-align: left;
     }
 
-    /* Esconde o SVG na versão desktop */
+    /* Esconde o SVG no Desktop */
 
     .weather-icon {
         display: none;
     }
 
-    /* Emoji solicitado pela atividade */
+    /* Exibe o emoji solicitado pela atividade */
 
     .climate-title::after {
         content: " ⛅";
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
-    /* TÍTULOS */
+    /* ==========================
+       TÍTULOS
+    ========================== */
 
     header h1 {
         font-size: 2.8rem;
     }
 
     .section-title {
-        font-size: 1.7rem;
+        font-size: 1.9rem;
+        margin-bottom: 1.5rem;
     }
 
-    /* FOOTER */
+    /* ==========================
+       FOOTER
+    ========================== */
 
     footer {
         font-size: 1rem;
