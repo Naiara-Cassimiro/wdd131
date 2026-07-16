@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Brasil</title>
+    <title>Brasil | WDD 131 - Página do País</title>
 
-    <link rel="stylesheet" href="styles/local.css">
-    <link rel="stylesheet" href="styles/local-large.css">
+    <meta name="description" content="Conheça o Brasil, seus dados geográficos e informações sobre o clima.">
+
+    <meta name="author" content="Naiara Cassimiro">
+
+    <link rel="stylesheet" href="estilos/local.css">
+    <link rel="stylesheet" href="estilos/local-large.css">
 
     <script src="scripts/local.js" defer></script>
 </head>
@@ -21,51 +25,110 @@
 
     <main>
 
-        <picture>
+        <!-- HERO IMAGE -->
 
-            <source media="(min-width:800px)" srcset="imagens/brasil-large.webp">
+        <section class="hero">
 
-            <img src="imagens/brasil-small.webp" alt="Paisagem do Brasil">
+            <picture>
 
-        </picture>
+                <source media="(min-width: 800px)" srcset="imagens/brasil-large.webp">
 
-        <section class="data">
+                <img src="imagens/brasil-small.webp" alt="Vista panorâmica do Rio de Janeiro com o Pão de Açúcar">
 
-            <h2>Dados</h2>
-
-            <p><strong>Capital:</strong> Brasília</p>
-            <p><strong>População:</strong> 203 milhões</p>
-            <p><strong>Idioma:</strong> Português</p>
-            <p><strong>Moeda:</strong> Real</p>
-            <p><strong>Área:</strong> 8.516.000 km²</p>
+            </picture>
 
         </section>
 
-        <section class="weather">
+        <!-- CONTEÚDO -->
 
-            <h2>Clima</h2>
+        <div class="cards">
 
-            <img src="imagens/weather.svg" alt="Ícone do clima">
+            <!-- DADOS -->
 
-            <p><strong>Temperatura:</strong> <span id="temp">8</span>°C</p>
+            <section class="card data">
 
-            <p><strong>Vento:</strong> <span id="wind">6</span> km/h</p>
+                <h2 class="section-title">
+                    Dados
+                </h2>
 
-            <p><strong>Sensação:</strong> <span id="windchill"></span></p>
+                <p><strong>Capital:</strong> Brasília</p>
 
-        </section>
+                <p><strong>População:</strong> 203 milhões</p>
+
+                <p><strong>Área:</strong> 8.516.000 km²</p>
+
+                <p><strong>Idioma:</strong> Português</p>
+
+                <p><strong>Moeda:</strong> Real (BRL)</p>
+
+                <p><strong>Fuso horário:</strong> UTC−3</p>
+
+            </section>
+
+            <!-- CLIMA -->
+
+            <section class="card weather">
+
+                <h2 class="section-title climate-title">
+                    Clima
+                </h2>
+
+                <!-- SVG somente no mobile -->
+
+                <img class="weather-icon" src="imagens/weather.svg"
+                    alt="Ícone representando clima parcialmente nublado">
+
+                <p>
+
+                    <strong>Temperatura:</strong>
+
+                    <span id="temp">8</span> °C
+
+                </p>
+
+                <p>
+
+                    <strong>Velocidade do vento:</strong>
+
+                    <span id="wind">6</span> km/h
+
+                </p>
+
+                <p>
+
+                    <strong>Sensação térmica:</strong>
+
+                    <span id="windchill"></span>
+
+                </p>
+
+            </section>
+
+        </div>
 
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> | Naiara Cassimiro | Brasil</p>
 
         <p>
-            Última modificação:
-            <span id="lastModified"></span>
-        </p>
-    </footer>
 
+            &copy;
+
+            <span id="year"></span>
+
+            Naiara Cassimiro | Brasil
+
+        </p>
+
+        <p>
+
+            Última modificação:
+
+            <span id="lastModified"></span>
+
+        </p>
+
+    </footer>
 
 </body>
 

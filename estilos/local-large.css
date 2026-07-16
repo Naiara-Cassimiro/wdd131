@@ -1,43 +1,74 @@
-@media screen and (min-width:800px){
+/* ==========================================
+   DESKTOP - TELAS MAIORES
+========================================== */
 
-main{
-    position:relative;
-}
+@media screen and (min-width: 800px) {
 
-.data{
+    /* HERO */
 
-position:absolute;
+    .hero img {
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+    }
 
-top:50px;
+    /* CARDS */
 
-left:40px;
+    .cards {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
 
-width:250px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
 
-background:rgba(255,255,255,.85);
+        align-items: start;
+    }
 
-}
+    .card {
+        min-height: 340px;
+    }
 
-.weather{
+    /* DADOS */
 
-position:absolute;
+    .data {
+        text-align: left;
+    }
 
-bottom:50px;
+    /* CLIMA */
 
-right:40px;
+    .weather {
+        text-align: left;
+    }
 
-width:220px;
+    /* Esconde o SVG na versão desktop */
 
-background:rgba(255,255,255,.85);
+    .weather-icon {
+        display: none;
+    }
 
-}
+    /* Emoji solicitado pela atividade */
 
-.weather h2::after{
-content:" ⛅";
-}
+    .climate-title::after {
+        content: " ⛅";
+        font-size: 1.4rem;
+    }
 
-.weather img{
-display:none;
-}
+    /* TÍTULOS */
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+        font-size: 1rem;
+    }
 
 }
