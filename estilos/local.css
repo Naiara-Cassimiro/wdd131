@@ -1,20 +1,5 @@
 /* ==========================
-   VARIÁVEIS GLOBAIS
-========================== */
-
-:root {
-    --primary: #009c3b;
-    --secondary: #ffdf00;
-    --dark: #002776;
-    --light: #ffffff;
-    --background: #f4f4f4;
-    --text: #333333;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --radius: 12px;
-}
-
-/* ==========================
-   RESET
+RESET
 ========================== */
 
 * {
@@ -24,13 +9,13 @@
 }
 
 /* ==========================
-   BODY
+BODY
 ========================== */
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--background);
-    color: var(--text);
+    background: #f4f4f4;
+    color: #333333;
     line-height: 1.6;
 
     min-height: 100vh;
@@ -43,15 +28,15 @@ main {
 }
 
 /* ==========================
-   HEADER
+HEADER
 ========================== */
 
 header {
-    background: var(--primary);
-    color: var(--light);
+    background: #009c3b;
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
@@ -59,7 +44,7 @@ header h1 {
 }
 
 /* ==========================
-   HERO
+HERO
 ========================== */
 
 .hero {
@@ -68,79 +53,61 @@ header h1 {
 
 .hero img {
     width: 100%;
-    height: 200%;
+    height: 350px;
     object-fit: cover;
     object-position: center;
     display: block;
 }
 
 /* ==========================
-   CARDS
+CARDS
 ========================== */
 
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-
-    padding: 2.5rem;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 /* ==========================
-   CARD
+CARD
 ========================== */
 
 .card {
-    background: var(--light);
-    border-radius: var(--radius);
-    padding: 40px;
-    box-shadow: var(--shadow);
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* ==========================
-   TÍTULOS
+TÍTULOS
 ========================== */
 
 .section-title {
-
-    background: var(--primary);
-
-    color: white;
-
+    background: #009c3b;
+    color: #ffffff;
     text-align: center;
-
     padding: 15px;
-
     border-radius: 8px;
-
     font-size: 1.8rem;
-
     margin-bottom: 25px;
-
     position: relative;
-
 }
 
 .section-title::before {
-
     content: "";
-
     position: absolute;
-
     left: 0;
-
     bottom: -10px;
-
     width: 100%;
-
     height: 4px;
-
-    background: var(--secondary);
-
+    background: #ffdf00;
 }
 
 /* ==========================
-   PARÁGRAFOS
+PARÁGRAFOS
 ========================== */
 
 .card p {
@@ -150,13 +117,13 @@ header h1 {
 }
 
 .card strong {
-    color: var(--primary);
+    color: #009c3b;
     font-size: 1.1rem;
     font-weight: bold;
 }
 
 /* ==========================
-   CLIMA
+CLIMA
 ========================== */
 
 .weather {
@@ -174,17 +141,17 @@ header h1 {
 }
 
 /* ==========================
-   FOOTER
+FOOTER
 ========================== */
 
 footer {
-    background: var(--dark);
-    color: white;
+    background: #002776;
+    color: #ffffff;
     text-align: center;
     padding: 25px;
     margin-top: auto;
 }
 
 footer p:first-child {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
