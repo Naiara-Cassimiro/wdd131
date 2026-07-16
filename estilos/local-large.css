@@ -1,24 +1,56 @@
+/* ==========================================
+DESKTOP
+========================================== */
+
 @media screen and (min-width: 800px) {
+
+    /* HERO */
+
+    .hero {
+        position: relative;
+    }
 
     .hero img {
         width: 100%;
-        height: auto;      /* mostra a imagem inteira */
+        height: 1080px;
+        object-fit: cover;
+        object-position: center;
         display: block;
     }
 
+    /* CARDS */
+
     .cards {
-        max-width: 1000px;
-        margin: -80px auto 50px;
+        max-width: 1100px;
+        margin: -160px auto 50px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         padding: 0 2rem;
         position: relative;
-        z-index: 20;
+        z-index: 10;
     }
 
+    /* CARD */
+
     .card {
+        min-height: 420px;
         padding: 35px;
+        background: var(--light);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+    }
+
+    /* DADOS */
+
+    .data {
+        text-align: left;
+    }
+
+    /* CLIMA */
+
+    .weather {
+        text-align: left;
     }
 
     .weather-icon {
@@ -28,5 +60,28 @@
     .climate-title::after {
         content: " ⛅";
         font-size: 1.4rem;
+    }
+
+    /* TÍTULOS */
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* TEXTO */
+
+    .card p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
+
+    /* FOOTER */
+
+    footer {
+        font-size: 1rem;
     }
 }
