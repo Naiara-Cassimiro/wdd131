@@ -21,7 +21,7 @@ DESKTOP
     /* CARDS */
 
     .cards {
-        max-width: 1100px;
+        max-width: 1120px;
         margin: -160px auto 50px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -34,7 +34,7 @@ DESKTOP
     /* CARD */
 
     .card {
-        min-height: 420px;
+        min-height: 450px;
         padding: 35px;
         background: var(--light);
         border-radius: var(--radius);
