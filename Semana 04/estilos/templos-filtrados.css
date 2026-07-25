@@ -1,0 +1,225 @@
+/* ==========================================
+   WDD 131 - S04 Álbum de Templos Filtrados
+   Arquivo: templos-filtrados.css
+   Mobile First
+========================================== */
+
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Variáveis ---------- */
+
+:root {
+    --primary-color: #1d3557;
+    --secondary-color: #457b9d;
+    --accent-color: #f4a261;
+    --background-color: #f8f9fa;
+    --text-color: #333333;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Body ---------- */
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+}
+
+#course-title {
+    width: 100%;
+    text-align: center;
+    margin-top: .5rem;
+    font-size: .95rem;
+}
+
+/* ---------- Botão Hambúrguer ---------- */
+
+#menu {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* ---------- Navegação ---------- */
+
+nav.navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+nav.navigation.open {
+    display: flex;
+}
+
+nav.navigation a {
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    padding: .9rem;
+
+    border-top: 1px solid rgba(255,255,255,.25);
+
+    transition: background-color .3s ease;
+}
+
+nav.navigation a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ---------- Main ---------- */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h1 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 1rem 0 2rem;
+}
+
+/* ==========================================
+   Galeria de Templos
+========================================== */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* ==========================================
+   Cartões dos Templos
+========================================== */
+
+.card-templo {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--shadow);
+    padding: 1rem;
+    transition: transform .3s ease,
+                box-shadow .3s ease;
+}
+
+.card-templo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+/* ==========================================
+   Título
+========================================== */
+
+.titulo-templo {
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================
+   Informações
+========================================== */
+
+.card-templo p {
+    margin: .4rem 0;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   Imagem
+========================================== */
+
+.imagem-templo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: .5rem 0;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Acessibilidade ---------- */
+
+a:focus,
+button:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Menu Aberto ---------- */
+
+header.open {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+header.open #menu {
+    align-self: flex-end;
+}
