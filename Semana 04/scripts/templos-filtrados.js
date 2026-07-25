@@ -259,3 +259,83 @@ botaoInicio.addEventListener("click", (event) => {
     exibirTemplos(templos);
 
 });
+
+// ==========================================
+// Filtro - Antigos
+// Templos consagrados antes de 1900
+// ==========================================
+
+botaoAntigos.addEventListener("click", (event) => {
+
+    event.preventDefault();
+
+    const templosAntigos = templos.filter((templo) => {
+
+        const anoConsagracao = parseInt(templo.consagracao);
+
+        return anoConsagracao < 1900;
+
+    });
+
+    exibirTemplos(templosAntigos);
+
+});
+
+// ==========================================
+// Filtro - Novos
+// Templos consagrados após 2000
+// ==========================================
+
+botaoNovos.addEventListener("click", (event) => {
+
+    event.preventDefault();
+
+    const templosNovos = templos.filter((templo) => {
+
+        const anoConsagracao = parseInt(templo.consagracao);
+
+        return anoConsagracao > 2000;
+
+    });
+
+    exibirTemplos(templosNovos);
+
+});
+
+// ==========================================
+// Filtro - Grandes
+// Templos com área maior que 90.000 pés²
+// ==========================================
+
+botaoGrandes.addEventListener("click", (event) => {
+
+    event.preventDefault();
+
+    const templosGrandes = templos.filter((templo) => {
+
+        return templo.area > 90000;
+
+    });
+
+    exibirTemplos(templosGrandes);
+
+});
+
+// ==========================================
+// Filtro - Pequenos
+// Templos com área menor que 10.000 pés²
+// ==========================================
+
+botaoPequenos.addEventListener("click", (event) => {
+
+    event.preventDefault();
+
+    const templosPequenos = templos.filter((templo) => {
+
+        return templo.area < 10000;
+
+    });
+
+    exibirTemplos(templosPequenos);
+
+});

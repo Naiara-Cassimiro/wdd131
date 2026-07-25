@@ -1,12 +1,10 @@
 /* ==========================================
-   WDD 131 - S02 Álbum de Templos
-   Arquivo: templos-grandes.css
+   WDD 131 - S04 Álbum de Templos Filtrados
+   Arquivo: templos-filtrados-grandes.css
    Layout para telas maiores
 ========================================== */
 
-@media screen and (min-width: 768px)
-
-{
+@media screen and (min-width: 768px) {
 
     /* ---------- Header ---------- */
 
@@ -69,12 +67,11 @@
     /* ---------- Galeria ---------- */
 
     .gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 
-    figure img {
+    .imagem-templo {
         width: 100%;
         height: 250px;
         object-fit: cover;
@@ -84,6 +81,18 @@
 
     footer {
         font-size: 1rem;
+    }
+
+}
+
+/* ==========================================
+   Layout para telas grandes
+========================================== */
+
+@media screen and (min-width: 1024px) {
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
