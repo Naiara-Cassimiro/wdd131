@@ -137,28 +137,23 @@ const templos = [
     {
     nomeDoTemplo: "São Paulo Brasil",
     localizacao: "São Paulo, Brasil",
-    consagracao: "1978, 30 de outubro",
+    consagracao: "30 de outubro de 1978",
     area: 59246,
-    urlDaImagem:
-        "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/sao-paulo-brazil-temple-4758.jpg"
+    urlDaImagem: "imagens/templo-sao-paulo.webp"
 },
-
 {
     nomeDoTemplo: "Recife Brasil",
     localizacao: "Recife, Pernambuco, Brasil",
-    consagracao: "2000, 15 de dezembro",
+    consagracao: "15 de dezembro de 2000",
     area: 37200,
-    urlDaImagem:
-        "https://churchofjesuschristtemples.org/assets/img/temples/recife-brazil-temple/recife-brazil-temple-4676.jpg"
+    urlDaImagem: "imagens/templo-recife.webp"
 },
-
 {
     nomeDoTemplo: "Curitiba Brasil",
     localizacao: "Curitiba, Paraná, Brasil",
-    consagracao: "2008, 1 de junho",
+    consagracao: "1 de junho de 2008",
     area: 27850,
-    urlDaImagem:
-        "https://churchofjesuschristtemples.org/assets/img/temples/curitiba-brazil-temple/curitiba-brazil-temple-5408.jpg"
+    urlDaImagem: "imagens/templo-curitiba.webp"
 }
 
 ];
