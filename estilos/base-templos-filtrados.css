@@ -1,8 +1,3 @@
-/* ==========================================
-   WDD 131 - Álbum de Templos Filtrados
-   Arquivo: base-templos-filtrados.css
-========================================== */
-
 :root {
     --primary-color: #12355b;
     --secondary-color: #2f6690;
@@ -25,8 +20,6 @@ body {
     line-height: 1.6;
 }
 
-/* ================= HEADER ================= */
-
 header {
     background-color: var(--primary-color);
     color: var(--white);
@@ -46,8 +39,6 @@ header {
     font-size: 1.2rem;
     font-weight: 400;
 }
-
-/* ================= NAVIGATION ================= */
 
 nav {
     display: flex;
@@ -75,8 +66,6 @@ nav a:focus {
     transform: translateY(-2px);
 }
 
-/* ================= MAIN ================= */
-
 main {
     max-width: 1000px;
     margin: 2rem auto;
@@ -90,8 +79,6 @@ main h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
-
-/* ================= FOOTER ================= */
 
 footer {
     background-color: var(--primary-color);
