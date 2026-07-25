@@ -1,3 +1,8 @@
+/* ==========================================
+   WDD 131 - Álbum de Templos Filtrados
+   Arquivo: base-templos-filtrados.css
+========================================== */
+
 :root {
     --primary-color: #12355b;
     --secondary-color: #2f6690;
@@ -7,13 +12,11 @@
     --shadow: rgba(0, 0, 0, 0.15);
 }
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 body {
     font-family: "Roboto", sans-serif;
@@ -22,14 +25,12 @@ body {
     line-height: 1.6;
 }
 
-
 /* ================= HEADER ================= */
 
 header {
     background-color: var(--primary-color);
     color: var(--white);
 }
-
 
 #course-title {
     display: block;
@@ -40,13 +41,11 @@ header {
     font-weight: 700;
 }
 
-
 #course-title span {
     display: block;
     font-size: 1.2rem;
     font-weight: 400;
 }
-
 
 /* ================= NAVIGATION ================= */
 
@@ -56,22 +55,18 @@ nav {
     background-color: var(--secondary-color);
 }
 
-
 nav a {
     flex: 1;
     padding: 1rem;
     text-align: center;
-
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
-
-    transition: 
+    transition:
         background-color 0.3s ease,
         color 0.3s ease,
         transform 0.3s ease;
 }
-
 
 nav a:hover,
 nav a:focus {
@@ -80,158 +75,32 @@ nav a:focus {
     transform: translateY(-2px);
 }
 
-
 /* ================= MAIN ================= */
 
 main {
     max-width: 1000px;
     margin: 2rem auto;
     padding: 1rem;
-
-    display: grid;
-    gap: 1.5rem;
 }
-
 
 main h1 {
-    grid-column: 1 / -1;
-
     text-align: center;
-
     color: var(--primary-color);
-
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
-
-
-/* ================= CARDS ================= */
-
-.card {
-
-    background-color: var(--white);
-
-    border-radius: 10px;
-
-    overflow: hidden;
-
-    box-shadow: 0 4px 10px var(--shadow);
-}
-
-
-.card h2 {
-
-    background-color: var(--primary-color);
-
-    color: var(--white);
-
-    text-align: center;
-
-    padding: 1rem;
-
-    font-family: "Montserrat", sans-serif;
-}
-
-
-.card-content {
-
-    display: grid;
-
-    grid-template-columns: 1fr 220px;
-
-    gap: 1.5rem;
-
-    align-items: center;
-
-    padding: 1.5rem;
-}
-
-
-.card-content p {
-
-    text-align: justify;
-
-}
-
-
-.card img {
-
-    width: 100%;
-
-    height: auto;
-
-    border-radius: 8px;
-
-    display: block;
-
-}
-
 
 /* ================= FOOTER ================= */
 
 footer {
-
     background-color: var(--primary-color);
-
     color: var(--white);
-
     text-align: center;
-
     padding: 1.5rem;
-
     margin-top: 2rem;
-
 }
-
 
 footer p {
-
     margin: 0.5rem;
-
-}
-
-
-/* ================= RESPONSIVE ================= */
-
-@media screen and (max-width: 768px) {
-
-
-    nav {
-
-        flex-direction: column;
-
-    }
-
-
-    nav a {
-
-        width: 100%;
-
-    }
-
-
-    .card-content {
-
-        grid-template-columns: 1fr;
-
-        text-align: center;
-
-    }
-
-
-    .card-content p {
-
-        text-align: center;
-
-    }
-
-
-    .card img {
-
-        max-width: 250px;
-
-        margin: 0 auto;
-
-    }
-
 }
