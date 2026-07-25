@@ -65,10 +65,6 @@ if (menuButton && navigation) {
 // Array de Objetos dos Templos
 // ==========================================
 
-// ==========================================
-// Array de Objetos dos Templos
-// ==========================================
-
 const templos = [
 
     {
@@ -137,21 +133,21 @@ const templos = [
     {
     nomeDoTemplo: "São Paulo Brasil",
     localizacao: "São Paulo, Brasil",
-    consagracao: "30 de outubro de 1978",
+    consagracao: "1978, 30 de outubro",
     area: 59246,
     urlDaImagem: "imagens/templo-sao-paulo.webp"
 },
 {
     nomeDoTemplo: "Recife Brasil",
     localizacao: "Recife, Pernambuco, Brasil",
-    consagracao: "15 de dezembro de 2000",
+    consagracao: "2000, 15 de dezembro",
     area: 37200,
     urlDaImagem: "imagens/templo-recife.webp"
 },
 {
     nomeDoTemplo: "Curitiba Brasil",
     localizacao: "Curitiba, Paraná, Brasil",
-    consagracao: "1 de junho de 2008",
+    consagracao: "2008, 1 de junho",
     area: 27850,
     urlDaImagem: "imagens/templo-curitiba.webp"
 }
