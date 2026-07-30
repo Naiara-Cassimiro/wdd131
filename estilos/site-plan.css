@@ -1,0 +1,172 @@
+/* ==========================
+   Google Fonts
+========================== */
+
+:root {
+    --primary: #0F172A;
+    --secondary: #2563EB;
+    --accent: #F97316;
+    --light: #FFFFFF;
+    --background: #F8FAFC;
+    --text: #334155;
+    --border: #CBD5E1;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================
+   Reset
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   Base
+========================== */
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+main {
+    width: min(1100px, 92%);
+    margin: 2rem auto;
+}
+
+/* ==========================
+   Cabeçalho
+========================== */
+
+header {
+    background: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+header h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #dbeafe;
+}
+
+header p {
+    margin-top: 1rem;
+}
+
+/* ==========================
+   Seções
+========================== */
+
+section {
+    background: var(--light);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+section h2 {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--secondary);
+    padding-bottom: .5rem;
+}
+
+section h3 {
+    font-family: "Poppins", sans-serif;
+    margin: 1rem 0 .5rem;
+    color: var(--secondary);
+}
+
+section p,
+section li {
+    margin-bottom: .75rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+}
+
+/* ==========================
+   Tabela
+========================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th {
+    background: var(--secondary);
+    color: white;
+    padding: .9rem;
+    text-align: left;
+}
+
+td {
+    padding: .9rem;
+    border: 1px solid var(--border);
+}
+
+tbody tr:nth-child(even) {
+    background: #eef4ff;
+}
+
+/* ==========================
+   Wireframes
+========================== */
+
+section img {
+    margin: 1.5rem auto 0;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+/* ==========================
+   Rodapé
+========================== */
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* ==========================
+   Desktop
+========================== */
+
+@media (min-width: 768px) {
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    section {
+        padding: 2.5rem;
+    }
+
+}
