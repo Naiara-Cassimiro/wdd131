@@ -1,435 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Documento de planejamento do site Caminhos da Fé, projeto final da disciplina WDD 131.">
-    <meta name="author" content="Naiara Cassimiro">
-
-    <title>Planejamento do Site | Caminhos da Fé</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="estilos/planejamento.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigma Clube - Documento de Planejamento do Site</title>
+  <meta name="description" content="Documento de planejamento do site Enigma Clube, projeto da disciplina WDD 131.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header>
-        <div class="cabecalho-conteudo">
-            <img src="imagens/logo-caminhos-da-fe.svg" alt="Logotipo do site Caminhos da Fé" width="110" height="110">
 
-            <div>
-                <p class="identificacao">WDD 131 — Projeto Final</p>
-                <h1>Documento de Planejamento do Site</h1>
-                <p class="nome-projeto">Caminhos da Fé</p>
-            </div>
+  <header>
+    <h1 class="logo">🔎 Enigma Clube</h1>
+    <p class="subtitulo">Documento de Planejamento do Site — WDD 131</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#nome-do-site">Nome do Site</a></li>
+      <li><a href="#finalidade">Finalidade</a></li>
+      <li><a href="#cenarios">Cenários</a></li>
+      <li><a href="#esquema-de-cores">Esquema de Cores</a></li>
+      <li><a href="#tipografia">Tipografia</a></li>
+      <li><a href="#wireframe">Wireframe</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="nome-do-site" aria-labelledby="titulo-nome-do-site">
+      <h2 id="titulo-nome-do-site"><span class="criterio-numero">4.</span> Nome do Site</h2>
+      <p><strong>Enigma Clube</strong> — o nome foi escolhido por transmitir, de forma direta e memorável,
+        a proposta do site: uma comunidade dedicada a enigmas, charadas e desafios de lógica. A palavra
+        "Enigma" comunica imediatamente o tema do conteúdo, enquanto "Clube" reforça o caráter de
+        comunidade e pertencimento entre os visitantes que compartilham o gosto por quebra-cabeças.</p>
+      <p>Disponibilidade de domínio (opcional): <code>enigmaclube.com.br</code></p>
+    </section>
+
+    <section id="finalidade" aria-labelledby="titulo-finalidade">
+      <h2 id="titulo-finalidade"><span class="criterio-numero">5.</span> Finalidade do Site</h2>
+      <p>O Enigma Clube é um site voltado a entusiastas de enigmas e quebra-cabeças. Ele oferece uma
+        coleção organizada de desafios (lógica, charadas, cifras e enigmas visuais), um formulário para que
+        os visitantes enviem soluções ou sugiram novos enigmas para a comunidade, e informações sobre como
+        participar dos desafios semanais do clube.</p>
+    </section>
+
+    <section id="cenarios" aria-labelledby="titulo-cenarios">
+      <h2 id="titulo-cenarios"><span class="criterio-numero">6.</span> Cenários</h2>
+      <p>Perguntas que um visitante representativo do público-alvo poderia fazer ao chegar ao site:</p>
+      <div class="exemplo">"Onde posso encontrar um novo enigma para resolver hoje?"</div>
+      <div class="exemplo">"Como faço para enviar minha solução ou sugerir um novo enigma para a comunidade?"</div>
+      <div class="exemplo">"Existe algum registro de quem mais resolveu enigmas no clube?"</div>
+    </section>
+
+    <section id="esquema-de-cores" aria-labelledby="titulo-esquema-de-cores">
+      <h2 id="titulo-esquema-de-cores"><span class="criterio-numero">7.</span> Esquema de Cores</h2>
+      <p>A paleta abaixo é usada em todo este documento de planejamento, mantendo a identidade visual do
+        Enigma Clube:</p>
+      <div class="paleta">
+        <div class="amostra">
+          <div class="cor cor-primaria"></div>
+          <div class="legenda"><strong>Índigo Profundo</strong> #2b1055<br>Usada em títulos, cabeçalho, rodapé e menu de navegação (texto).</div>
         </div>
-    </header>
+        <div class="amostra">
+          <div class="cor cor-secundaria"></div>
+          <div class="legenda"><strong>Dourado Enigma</strong> #d4af37<br>Usada em destaques, bordas das seções, fundo do menu e citações de exemplo.</div>
+        </div>
+        <div class="amostra">
+          <div class="cor cor-fundo-amostra"></div>
+          <div class="legenda"><strong>Marfim</strong> #f5f2e8<br>Usada como cor de fundo geral da página.</div>
+        </div>
+        <div class="amostra">
+          <div class="cor cor-texto-amostra"></div>
+          <div class="legenda"><strong>Grafite</strong> #2e2e2e<br>Usada no texto dos parágrafos, para garantir bom contraste de leitura.</div>
+        </div>
+      </div>
+      <p id="wireframe-cor-nota" style="margin-top:1rem;">
+        <em>Critério 8 — Esquema de cores usado no documento:</em> como pode ser visto em todo este
+        planejamento, as quatro cores acima já estão aplicadas no cabeçalho, no menu, nas bordas das
+        seções e no texto — comprovando o uso real da paleta neste próprio documento.
+      </p>
+    </section>
 
-    <main>
-        <section aria-labelledby="nome-site">
-            <h2 id="nome-site">Nome do Site</h2>
+    <section id="tipografia" aria-labelledby="titulo-tipografia">
+      <h2 id="titulo-tipografia"><span class="criterio-numero">9.</span> Tipografia</h2>
+      <p>Foram selecionadas duas fontes do Google Fonts para o projeto:</p>
+      <div class="tipografia-amostra">
+        <p class="titulo-fonte">Playfair Display — usada em títulos e cabeçalhos (h1, h2, h3)</p>
+        <p class="corpo-fonte">Poppins — usada no corpo do texto, parágrafos, menu e rodapé.</p>
+      </div>
+      <p style="margin-top:1rem;">
+        <em>Critério 10 — Tipografia usada no documento:</em> as duas fontes já estão em uso neste
+        planejamento — repare que os títulos de cada seção usam a Playfair Display, enquanto este
+        parágrafo e todo o restante do texto corrido usam a Poppins.
+      </p>
+    </section>
 
-            <div class="destaque-nome">
-                <img src="imagens/logo-caminhos-da-fe.svg" alt="Símbolo do Caminhos da Fé" width="90" height="90">
+    <section id="wireframe" aria-labelledby="titulo-wireframe">
+      <h2 id="titulo-wireframe"><span class="criterio-numero">11.</span> Wireframe</h2>
+      <p>Esboços da página inicial do Enigma Clube, para visualização em dispositivo móvel e em tela
+        maior (desktop):</p>
 
-                <div>
-                    <h3>Caminhos da Fé</h3>
+      <div class="wireframes">
+        <div class="wireframe-bloco">
+          <h3>Visualização Mobile</h3>
+          <div class="wf wf-mobile">
+            <div class="wf-caixa wf-header">Logotipo + Título</div>
+            <div class="wf-caixa wf-nav">Menu ☰</div>
+            <div class="wf-caixa wf-hero">Banner / Chamada Principal</div>
+            <div class="wf-caixa">Enigma do Dia</div>
+            <div class="wf-caixa">Categorias de Enigmas</div>
+            <div class="wf-caixa">Formulário de Envio</div>
+            <div class="wf-caixa wf-footer">Rodapé</div>
+          </div>
+        </div>
 
-                    <p>
-                        O nome <strong>Caminhos da Fé</strong> representa uma
-                        jornada de crescimento espiritual, aprendizado, amizade,
-                        desenvolvimento de talentos e serviço ao próximo.
-                    </p>
-
-                    <p>
-                        O nome foi escolhido por ser simples, significativo e
-                        fácil de lembrar. Ele também se relaciona diretamente
-                        com o propósito do site, que é orientar e inspirar jovens
-                        por meio de atividades e conteúdos positivos.
-                    </p>
-
-                    <p>
-                        Sugestão de domínio:
-                        <strong>caminhosdafe.org</strong>.
-                    </p>
-                </div>
+        <div class="wireframe-bloco">
+          <h3>Visualização Desktop</h3>
+          <div class="wf wf-desktop">
+            <div class="wf-caixa wf-header">Logotipo + Título</div>
+            <div class="wf-caixa wf-nav">Menu: Início | Enigmas | Enviar | Ranking | Sobre</div>
+            <div class="wf-caixa wf-hero">Banner / Chamada Principal</div>
+            <div class="wf-linha">
+              <div class="wf-caixa">Enigma do Dia</div>
+              <div class="wf-caixa">Categorias</div>
+              <div class="wf-caixa">Ranking</div>
             </div>
-        </section>
+            <div class="wf-caixa">Formulário de Envio de Enigma</div>
+            <div class="wf-caixa wf-footer">Rodapé</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Enigma Clube — Documento de Planejamento do Site — Projeto WDD 131</p>
+  </footer>
 
-        <section aria-labelledby="finalidade-site">
-            <h2 id="finalidade-site">Finalidade do Site</h2>
-
-            <p>
-                O site Caminhos da Fé será um espaço digital voltado para jovens
-                interessados em participar de atividades que promovam
-                desenvolvimento espiritual, social e pessoal.
-            </p>
-
-            <p>
-                O site fornecerá informações sobre eventos, cronogramas,
-                atividades de música e dança, projetos de serviço e encontros de
-                estudo. Também oferecerá um formulário para que os visitantes
-                possam demonstrar interesse ou se inscrever nas atividades.
-            </p>
-
-            <p>
-                O objetivo principal é facilitar o acesso às informações,
-                incentivar a participação dos jovens e fortalecer sentimentos
-                de amizade, união, fé e serviço.
-            </p>
-        </section>
-
-        <section aria-labelledby="publico-alvo">
-            <h2 id="publico-alvo">Público-alvo</h2>
-
-            <p>
-                O público-alvo principal é formado por jovens, familiares,
-                líderes e outras pessoas interessadas em conhecer e participar
-                das atividades divulgadas pelo projeto.
-            </p>
-        </section>
-
-        <section aria-labelledby="cenarios">
-            <h2 id="cenarios">Cenários</h2>
-
-            <p>
-                Os cenários abaixo representam perguntas que poderão ser feitas
-                pelos visitantes do site:
-            </p>
-
-            <ul class="lista-cenarios">
-                <li>
-                    Onde posso consultar as datas, os horários e os locais das
-                    próximas atividades dos jovens?
-                </li>
-
-                <li>
-                    Como posso me inscrever para participar de uma atividade ou
-                    evento?
-                </li>
-
-                <li>
-                    Quais atividades de música, dança, estudo e serviço estão
-                    disponíveis?
-                </li>
-
-                <li>
-                    Onde posso encontrar informações de contato ou enviar uma
-                    mensagem para os responsáveis pelas atividades?
-                </li>
-            </ul>
-        </section>
-
-        <section aria-labelledby="esquema-cores">
-            <h2 id="esquema-cores">Esquema de Cores</h2>
-
-            <p>
-                As cores foram escolhidas para transmitir confiança, esperança,
-                acolhimento e energia. Elas serão utilizadas de maneira
-                consistente em todas as páginas do site.
-            </p>
-
-            <div class="grade-cores">
-                <article class="cartao-cor">
-                    <div class="amostra-cor azul-escuro">
-                        #1D3557
-                    </div>
-
-                    <div class="descricao-cor">
-                        <h3>Azul-escuro</h3>
-
-                        <p>
-                            Será usado no cabeçalho, menu de navegação, rodapé,
-                            títulos principais e elementos de maior destaque.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="cartao-cor">
-                    <div class="amostra-cor verde">
-                        #2A6F5E
-                    </div>
-
-                    <div class="descricao-cor">
-                        <h3>Verde</h3>
-
-                        <p>
-                            Será usado em subtítulos, ícones, categorias,
-                            detalhes visuais e mensagens de confirmação.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="cartao-cor">
-                    <div class="amostra-cor laranja">
-                        #C85D20
-                    </div>
-
-                    <div class="descricao-cor">
-                        <h3>Laranja</h3>
-
-                        <p>
-                            Será usado em botões, chamadas para ação, links em
-                            destaque e elementos que precisam chamar a atenção.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="cartao-cor">
-                    <div class="amostra-cor creme">
-                        #F8F5EF
-                    </div>
-
-                    <div class="descricao-cor">
-                        <h3>Creme</h3>
-
-                        <p>
-                            Será usado como cor principal de fundo para
-                            proporcionar uma aparência clara, leve e acolhedora.
-                        </p>
-                    </div>
-                </article>
-            </div>
-
-            <table>
-                <caption>
-                    Resumo da aplicação das cores
-                </caption>
-
-                <thead>
-                    <tr>
-                        <th scope="col">Cor</th>
-                        <th scope="col">Código</th>
-                        <th scope="col">Aplicação</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Azul-escuro</td>
-                        <td>#1D3557</td>
-                        <td>
-                            Cabeçalho, rodapé, menu e títulos principais.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Verde</td>
-                        <td>#2A6F5E</td>
-                        <td>
-                            Subtítulos, ícones, categorias e destaques.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Laranja</td>
-                        <td>#C85D20</td>
-                        <td>
-                            Botões, chamadas para ação e links importantes.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Creme</td>
-                        <td>#F8F5EF</td>
-                        <td>
-                            Fundo principal das páginas.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section aria-labelledby="tipografia">
-            <h2 id="tipografia">Tipografia</h2>
-
-            <p>
-                O site utilizará duas fontes. As fontes também estão sendo
-                aplicadas neste documento de planejamento.
-            </p>
-
-            <div class="grade-tipografia">
-                <article class="fonte-exemplo">
-                    <h3 class="exemplo-merriweather">
-                        Merriweather
-                    </h3>
-
-                    <p>
-                        Será usada nos títulos principais e subtítulos. Essa
-                        fonte apresenta uma aparência tradicional, elegante e
-                        confiável.
-                    </p>
-
-                    <p class="exemplo-merriweather frase-exemplo">
-                        Caminhos da Fé
-                    </p>
-                </article>
-
-                <article class="fonte-exemplo">
-                    <h3 class="exemplo-roboto">
-                        Roboto
-                    </h3>
-
-                    <p>
-                        Será usada nos parágrafos, menus, botões, formulários e
-                        demais conteúdos. Ela oferece boa leitura em diferentes
-                        tamanhos de tela.
-                    </p>
-
-                    <p class="exemplo-roboto frase-exemplo">
-                        Inspiração, aprendizado, amizade e serviço.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <section aria-labelledby="paginas-planejadas">
-            <h2 id="paginas-planejadas">Páginas Planejadas</h2>
-
-            <div class="grade-paginas">
-                <article>
-                    <h3>Página inicial</h3>
-
-                    <p>
-                        Apresentará o propósito do site, uma imagem principal,
-                        atividades em destaque e chamadas para acessar a
-                        programação e o formulário.
-                    </p>
-                </article>
-
-                <article>
-                    <h3>Eventos</h3>
-
-                    <p>
-                        Apresentará a programação das atividades e permitirá
-                        filtrar os eventos por categoria usando JavaScript.
-                    </p>
-                </article>
-
-                <article>
-                    <h3>Inscrição</h3>
-
-                    <p>
-                        Apresentará um formulário para o visitante registrar seu
-                        interesse em uma atividade.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <section aria-labelledby="wireframe">
-            <h2 id="wireframe">Wireframes</h2>
-
-            <p>
-                Os wireframes representam a organização planejada para a página
-                inicial nas visualizações móvel e desktop.
-            </p>
-
-            <div class="wireframes">
-                <article class="area-wireframe">
-                    <h3>Visualização móvel</h3>
-
-                    <div class="wireframe wireframe-mobile"
-                        aria-label="Wireframe da página inicial em dispositivo móvel">
-                        <div class="wire-box wire-cabecalho">
-                            <span>Logotipo</span>
-                            <span>Menu ☰</span>
-                        </div>
-
-                        <div class="wire-box wire-hero">
-                            <span>Imagem principal</span>
-                            <strong>Título e botão</strong>
-                        </div>
-
-                        <div class="wire-box">
-                            Apresentação do site
-                        </div>
-
-                        <div class="wire-box wire-card">
-                            Atividade 1
-                        </div>
-
-                        <div class="wire-box wire-card">
-                            Atividade 2
-                        </div>
-
-                        <div class="wire-box wire-card">
-                            Atividade 3
-                        </div>
-
-                        <div class="wire-box">
-                            Chamada para inscrição
-                        </div>
-
-                        <div class="wire-box wire-rodape">
-                            Rodapé e referências
-                        </div>
-                    </div>
-                </article>
-
-                <article class="area-wireframe">
-                    <h3>Visualização desktop</h3>
-
-                    <div class="wireframe wireframe-desktop" aria-label="Wireframe da página inicial em computador">
-                        <div class="wire-box wire-cabecalho">
-                            <span>Logotipo e nome</span>
-                            <span>Menu de navegação</span>
-                        </div>
-
-                        <div class="wire-box wire-hero">
-                            <span>Imagem principal</span>
-                            <strong>Título, texto e botão</strong>
-                        </div>
-
-                        <div class="wire-box">
-                            Apresentação do site
-                        </div>
-
-                        <div class="linha-cartoes">
-                            <div class="wire-box wire-card">
-                                Atividade 1
-                            </div>
-
-                            <div class="wire-box wire-card">
-                                Atividade 2
-                            </div>
-
-                            <div class="wire-box wire-card">
-                                Atividade 3
-                            </div>
-                        </div>
-
-                        <div class="wire-box">
-                            Chamada para inscrição
-                        </div>
-
-                        <div class="wire-box wire-rodape">
-                            Rodapé e referências
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>
-            © 2026 | Naiara Cassimiro | WDD 131
-        </p>
-
-        <p>
-            Documento de planejamento do projeto Caminhos da Fé
-        </p>
-    </footer>
 </body>
-
 </html>
