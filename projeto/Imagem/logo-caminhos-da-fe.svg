@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="titulo descricao">
+    <title id="titulo">Logotipo Caminhos da Fé</title>
+
+    <desc id="descricao">
+        Círculo verde com um caminho branco levando até uma estrela.
+    </desc>
+
+    <circle cx="100" cy="100" r="94" fill="#2a6f5e"></circle>
+
+    <circle cx="100" cy="100" r="86" fill="none" stroke="#f8f5ef" stroke-width="4"></circle>
+
+    <path d="M75 170
+           C78 145 90 135 96 115
+           C102 95 89 84 102 66
+           C112 52 126 47 132 28" fill="none" stroke="#f8f5ef" stroke-width="14" stroke-linecap="round"></path>
+
+    <path d="M100 46
+           L106 59
+           L120 61
+           L110 71
+           L112 85
+           L100 78
+           L88 85
+           L90 71
+           L80 61
+           L94 59
+           Z" fill="#c85d20" stroke="#f8f5ef" stroke-width="2"></path>
+</svg>
