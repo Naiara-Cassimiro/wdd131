@@ -1,21 +1,24 @@
-/* ==========================
-   Google Fonts
-========================== */
+/* ==============================
+   VARIÁVEIS GLOBAIS
+================================ */
 
 :root {
     --primary: #0F172A;
     --secondary: #2563EB;
     --accent: #F97316;
-    --light: #FFFFFF;
     --background: #F8FAFC;
-    --text: #334155;
+    --white: #FFFFFF;
+    --text: #333333;
     --border: #CBD5E1;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    --heading-font: "Poppins", sans-serif;
+    --body-font: "Roboto", sans-serif;
 }
 
-/* ==========================
-   Reset
-========================== */
+
+/* ==============================
+   RESET
+================================ */
 
 * {
     margin: 0;
@@ -23,93 +26,105 @@
     box-sizing: border-box;
 }
 
-/* ==========================
-   Base
-========================== */
 
 body {
-    font-family: "Roboto", sans-serif;
-    background: var(--background);
+    font-family: var(--body-font);
+    background-color: var(--background);
     color: var(--text);
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-    border-radius: 8px;
-}
 
-main {
-    width: min(1100px, 92%);
-    margin: 2rem auto;
-}
-
-/* ==========================
-   Cabeçalho
-========================== */
+/* ==============================
+   CABEÇALHO
+================================ */
 
 header {
-    background: var(--primary);
-    color: var(--light);
+    background-color: var(--primary);
+    color: var(--white);
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
 }
+
 
 header h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--heading-font);
     font-size: 2rem;
-    margin-bottom: .5rem;
+    font-weight: 700;
 }
+
 
 header h2 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    color: #dbeafe;
+    font-family: var(--heading-font);
+    margin-top: 0.5rem;
+    color: var(--accent);
 }
+
 
 header p {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
-/* ==========================
-   Seções
-========================== */
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+================================ */
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
 
 section {
-    background: var(--light);
-    padding: 2rem;
+    background-color: var(--white);
+    padding: 1.5rem;
     margin-bottom: 2rem;
     border-radius: 12px;
-    box-shadow: var(--shadow);
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
+
 
 section h2 {
-    font-family: "Poppins", sans-serif;
-    color: var(--primary);
+    font-family: var(--heading-font);
+    color: var(--secondary);
     margin-bottom: 1rem;
-    border-bottom: 3px solid var(--secondary);
-    padding-bottom: .5rem;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.5rem;
 }
+
 
 section h3 {
-    font-family: "Poppins", sans-serif;
-    margin: 1rem 0 .5rem;
-    color: var(--secondary);
+    font-family: var(--heading-font);
+    margin-top: 1rem;
+    color: var(--primary);
 }
 
-section p,
-section li {
-    margin-bottom: .75rem;
+
+p {
+    margin-bottom: 1rem;
 }
+
+
+/* ==============================
+   LISTAS
+================================ */
 
 ul {
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
 }
 
-/* ==========================
-   Tabela
-========================== */
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* ==============================
+   TABELA DE CORES
+================================ */
 
 table {
     width: 100%;
@@ -117,56 +132,71 @@ table {
     margin-top: 1rem;
 }
 
+
 th {
-    background: var(--secondary);
-    color: white;
-    padding: .9rem;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.8rem;
     text-align: left;
 }
 
+
 td {
-    padding: .9rem;
+    padding: 0.8rem;
     border: 1px solid var(--border);
 }
 
-tbody tr:nth-child(even) {
-    background: #eef4ff;
+
+tr:nth-child(even) {
+    background-color: #F1F5F9;
 }
 
-/* ==========================
-   Wireframes
-========================== */
 
-section img {
-    margin: 1.5rem auto 0;
+/* ==============================
+   IMAGENS / WIREFRAMES
+================================ */
+
+img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 1rem auto;
+
+    border-radius: 10px;
     border: 2px solid var(--border);
-    box-shadow: var(--shadow);
 }
 
-/* ==========================
-   Rodapé
-========================== */
+
+/* ==============================
+   RODAPÉ
+================================ */
 
 footer {
-    background: var(--primary);
-    color: white;
+    background-color: var(--primary);
+    color: var(--white);
     text-align: center;
     padding: 1.5rem;
-    margin-top: 3rem;
 }
 
-/* ==========================
-   Desktop
-========================== */
 
-@media (min-width: 768px) {
+/* ==============================
+   RESPONSIVIDADE DESKTOP
+================================ */
+
+@media screen and (min-width: 768px) {
 
     header h1 {
         font-size: 2.8rem;
     }
 
+
+    main {
+        padding: 0;
+    }
+
+
     section {
-        padding: 2.5rem;
+        padding: 2rem;
     }
 
 }
