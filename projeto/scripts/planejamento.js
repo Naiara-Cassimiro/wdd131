@@ -6,5 +6,6 @@ if (anoAtual) {
 }
 
 if (ultimaModificacao) {
-  ultimaModificacao.textContent = `Última modificação: ${document.lastModified}`;
+  ultimaModificacao.textContent =
+    `Última modificação: ${document.lastModified}`;
 }
