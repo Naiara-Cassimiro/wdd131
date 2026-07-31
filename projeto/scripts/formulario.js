@@ -1,38 +1,46 @@
 const produtos = [
-  { id: "fc-1888", nome: "Capacitor de Fluxo", classificacaoMedia: 4.5 },
-  { id: "fc-2050", nome: "Fios Elétricos", classificacaoMedia: 4.7 },
-  { id: "fs-1987", nome: "Circuitos de Tempo", classificacaoMedia: 3.5 },
-  { id: "ac-2000", nome: "Reator de Baixa Tensão", classificacaoMedia: 3.9 },
-  { id: "jj-1969", nome: "Equalizador de Distorção", classificacaoMedia: 5.0 }
+  {
+    id: "enigma-logico",
+    nome: "Enigma Lógico"
+  },
+  {
+    id: "charada-misteriosa",
+    nome: "Charada Misteriosa"
+  },
+  {
+    id: "desafio-de-cifras",
+    nome: "Desafio de Cifras"
+  },
+  {
+    id: "quebra-cabeca-visual",
+    nome: "Quebra-Cabeça Visual"
+  },
+  {
+    id: "desafio-semanal",
+    nome: "Desafio Semanal"
+  }
 ];
 
-function preencherProdutos() {
-  const seletorProduto = document.querySelector("#produto");
+const produtoSelecionado = document.querySelector("#produto");
+const anoAtual = document.querySelector("#ano-atual");
+const ultimaModificacao = document.querySelector("#ultima-modificacao");
 
-  if (!seletorProduto) {
-    return;
-  }
-
+if (produtoSelecionado) {
   produtos.forEach((produto) => {
-    const opcao = document.createElement("option");
-    opcao.value = produto.id;
-    opcao.textContent = produto.nome;
-    seletorProduto.appendChild(opcao);
+    const option = document.createElement("option");
+
+    option.value = produto.id;
+    option.textContent = produto.nome;
+
+    produtoSelecionado.appendChild(option);
   });
 }
 
-function atualizarRodape() {
-  const anoAtual = document.querySelector("#ano-atual");
-  const ultimaModificacao = document.querySelector("#ultima-modificacao");
-
-  if (anoAtual) {
-    anoAtual.textContent = new Date().getFullYear();
-  }
-
-  if (ultimaModificacao) {
-    ultimaModificacao.textContent = `Última modificação: ${document.lastModified}`;
-  }
+if (anoAtual) {
+  anoAtual.textContent = new Date().getFullYear();
 }
 
-preencherProdutos();
-atualizarRodape();
+if (ultimaModificacao) {
+  ultimaModificacao.textContent =
+    `Última modificação: ${document.lastModified}`;
+}
