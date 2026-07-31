@@ -179,6 +179,25 @@ footer {
   font-size: 0.85rem;
 }
 
+/* ---------- Responsividade ---------- */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 1.2rem 0.6rem 2rem;
+  }
+
+  .cartao {
+    padding: 1.2rem 1rem 1.5rem;
+  }
+
+  .estrelas {
+    font-size: 1.5rem;
+  }
+}
+
 /* ------- Página de confirmação (avaliacao.html) ------- */
 .confirmacao {
   text-align: center;

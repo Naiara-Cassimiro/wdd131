@@ -202,10 +202,35 @@ h2 {
 .wf-linha .wf-caixa { flex: 1; }
 .wf-footer { background-color: var(--cor-primaria); color: #fff; border: none; }
 
+.nota-espacada {
+  margin-top: 1rem;
+}
+
 footer {
   background-color: var(--cor-primaria);
   color: var(--cor-fundo);
   text-align: center;
   padding: 1.2rem;
   font-size: 0.9rem;
+}
+
+/* ---------- Responsividade ---------- */
+@media screen and (max-width: 600px) {
+  header .logo {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  main {
+    padding: 1rem 0.7rem 2rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
 }
