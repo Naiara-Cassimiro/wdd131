@@ -1,17 +1,23 @@
 /* ===========================================================
    Enigma Clube — Documento de Planejamento do Site
-   Esquema de cores e tipografia aplicados neste próprio documento
+   Esquema de cores e tipografia aplicados neste documento
    =========================================================== */
 
 :root {
-  --cor-primaria: #2b1055;   /* Índigo Profundo — títulos, cabeçalho, rodapé */
-  --cor-secundaria: #d4af37; /* Dourado Enigma — destaques, bordas, links, botões */
-  --cor-fundo: #f5f2e8;      /* Marfim — fundo geral da página */
-  --cor-superficie: #ffffff; /* Branco — fundo dos cartões de conteúdo */
-  --cor-texto: #2e2e2e;      /* Grafite — texto de parágrafos */
-  --fonte-titulos: 'Playfair Display', Georgia, serif;
-  --fonte-corpo: 'Poppins', Arial, sans-serif;
+  --cor-primaria: #2b1055;
+  --cor-secundaria: #d4af37;
+  --cor-fundo: #f5f2e8;
+  --cor-superficie: #ffffff;
+  --cor-texto: #2e2e2e;
+  --cor-borda: #cccccc;
+  --cor-wireframe: #fafafa;
+  --cor-wireframe-caixa: #e4e0f0;
+
+  --fonte-titulos: "Playfair Display", Georgia, serif;
+  --fonte-corpo: "Poppins", Arial, sans-serif;
 }
+
+/* ---------- Configurações gerais ---------- */
 
 * {
   box-sizing: border-box;
@@ -25,24 +31,40 @@ body {
   line-height: 1.6;
 }
 
+/* ---------- Cabeçalho ---------- */
+
 header {
   background-color: var(--cor-primaria);
   color: var(--cor-fundo);
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1rem 0;
   text-align: center;
 }
 
 header .logo {
+  margin: 0;
   font-family: var(--fonte-titulos);
   font-size: 2rem;
-  margin: 0;
   letter-spacing: 1px;
 }
 
-header p.subtitulo {
+header .subtitulo {
   margin: 0.3rem 0 0;
   color: var(--cor-secundaria);
   font-style: italic;
+}
+
+.auditoria-titulo {
+  margin: 0.5rem 0 1rem;
+  color: var(--cor-fundo);
+  font-family: var(--fonte-titulos);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* ---------- Navegação ---------- */
+
+header nav {
+  margin: 1rem -1rem 0;
 }
 
 nav {
@@ -50,12 +72,13 @@ nav {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 0.4rem;
   margin: 0;
-  padding: 0.6rem 0;
+  padding: 0.6rem;
+  list-style: none;
 }
 
 nav ul li {
@@ -65,18 +88,20 @@ nav ul li {
 nav a {
   display: block;
   padding: 0.7rem 1rem;
-  color: var(--cor-primaria);
-  text-decoration: none;
-  font-weight: 600;
   border-radius: 5px;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 nav a:hover,
 nav a:focus {
   background-color: var(--cor-primaria);
-  color: var(--cor-fundo);
+  color: var(--cor-superficie);
   text-decoration: underline;
 }
+
+/* ---------- Conteúdo principal ---------- */
 
 main {
   max-width: 1000px;
@@ -84,22 +109,30 @@ main {
   padding: 1.5rem 1rem 3rem;
 }
 
-section {
-  background-color: var(--cor-superficie);
-  border: 1px solid var(--cor-secundaria);
-  border-radius: 8px;
-  padding: 1.5rem;
+main > h1 {
+  margin-top: 0;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
-h1, h2, h3 {
-  font-family: var(--fonte-titulos);
+section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 8px;
+  background-color: var(--cor-superficie);
+}
+
+h1,
+h2,
+h3 {
   color: var(--cor-primaria);
+  font-family: var(--fonte-titulos);
 }
 
 h2 {
-  border-bottom: 3px solid var(--cor-secundaria);
   padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--cor-secundaria);
 }
 
 .criterio-numero {
@@ -108,14 +141,19 @@ h2 {
 }
 
 .exemplo {
-  background-color: var(--cor-fundo);
-  border-left: 4px solid var(--cor-secundaria);
-  padding: 0.8rem 1rem;
   margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid var(--cor-secundaria);
+  background-color: var(--cor-fundo);
   font-style: italic;
 }
 
-/* ---------- Amostras de cor (critério 7 e 8) ---------- */
+.nota-espacada {
+  margin-top: 1rem;
+}
+
+/* ---------- Amostras de cor ---------- */
+
 .paleta {
   display: flex;
   flex-wrap: wrap;
@@ -125,9 +163,9 @@ h2 {
 
 .amostra {
   flex: 1 1 200px;
-  border-radius: 6px;
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
 }
 
 .amostra .cor {
@@ -135,25 +173,38 @@ h2 {
 }
 
 .amostra .legenda {
-  background-color: var(--cor-superficie);
   padding: 0.6rem 0.8rem;
+  background-color: var(--cor-superficie);
   font-size: 0.9rem;
 }
 
-.cor-primaria { background-color: var(--cor-primaria); }
-.cor-secundaria { background-color: var(--cor-secundaria); }
-.cor-fundo-amostra { background-color: var(--cor-fundo); border-bottom: 1px solid #ccc; }
-.cor-texto-amostra { background-color: var(--cor-texto); }
+.cor-primaria {
+  background-color: var(--cor-primaria);
+}
 
-/* ---------- Amostras de tipografia (critério 9 e 10) ---------- */
+.cor-secundaria {
+  background-color: var(--cor-secundaria);
+}
+
+.cor-fundo-amostra {
+  border-bottom: 1px solid var(--cor-borda);
+  background-color: var(--cor-fundo);
+}
+
+.cor-texto-amostra {
+  background-color: var(--cor-texto);
+}
+
+/* ---------- Amostras de tipografia ---------- */
+
 .tipografia-amostra {
   margin-top: 1rem;
 }
 
 .tipografia-amostra .titulo-fonte {
+  color: var(--cor-primaria);
   font-family: var(--fonte-titulos);
   font-size: 1.8rem;
-  color: var(--cor-primaria);
 }
 
 .tipografia-amostra .corpo-fonte {
@@ -161,12 +212,13 @@ h2 {
   font-size: 1rem;
 }
 
-/* ---------- Wireframes (critério 11) ---------- */
+/* ---------- Wireframes ---------- */
+
 .wireframes {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   justify-content: center;
+  gap: 2rem;
   margin-top: 1.5rem;
 }
 
@@ -175,12 +227,12 @@ h2 {
 }
 
 .wf {
-  border: 2px solid var(--cor-primaria);
-  background-color: #fafafa;
   display: flex;
   flex-direction: column;
   gap: 6px;
   padding: 8px;
+  border: 2px solid var(--cor-primaria);
+  background-color: var(--cor-wireframe);
 }
 
 .wf-mobile {
@@ -189,38 +241,66 @@ h2 {
 
 .wf-desktop {
   width: 560px;
+  max-width: 100%;
 }
 
 .wf-caixa {
-  background-color: #e4e0f0;
+  padding: 6px 4px;
   border: 1px dashed var(--cor-primaria);
+  background-color: var(--cor-wireframe-caixa);
   color: var(--cor-primaria);
   font-family: var(--fonte-corpo);
   font-size: 0.75rem;
   text-align: center;
-  padding: 6px 4px;
 }
 
-.wf-header { background-color: var(--cor-primaria); color: #fff; border: none; padding: 10px 4px; }
-.wf-nav { background-color: var(--cor-secundaria); color: var(--cor-primaria); border: none; }
-.wf-hero { height: 60px; display: flex; align-items: center; justify-content: center; }
-.wf-linha { display: flex; gap: 6px; }
-.wf-linha .wf-caixa { flex: 1; }
-.wf-footer { background-color: var(--cor-primaria); color: #fff; border: none; }
-
-.nota-espacada {
-  margin-top: 1rem;
+.wf-header {
+  padding: 10px 4px;
+  border: none;
+  background-color: var(--cor-primaria);
+  color: var(--cor-superficie);
 }
+
+.wf-nav {
+  border: none;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
+}
+
+.wf-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.wf-linha {
+  display: flex;
+  gap: 6px;
+}
+
+.wf-linha .wf-caixa {
+  flex: 1;
+}
+
+.wf-footer {
+  border: none;
+  background-color: var(--cor-primaria);
+  color: var(--cor-superficie);
+}
+
+/* ---------- Rodapé ---------- */
 
 footer {
+  padding: 1.2rem;
   background-color: var(--cor-primaria);
   color: var(--cor-fundo);
-  text-align: center;
-  padding: 1.2rem;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 /* ---------- Responsividade ---------- */
+
 @media screen and (max-width: 600px) {
   header .logo {
     font-size: 1.5rem;
@@ -228,8 +308,12 @@ footer {
 
   nav ul {
     flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
+    align-items: stretch;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
   }
 
   main {
@@ -239,23 +323,12 @@ footer {
   section {
     padding: 1rem;
   }
-}
 
-/* ---------- Ajustes para Auditoria ---------- */
+  .wf-desktop {
+    width: 100%;
+  }
 
-.auditoria-titulo {
-    margin: .5rem 0 1rem;
-    color: var(--cor-fundo);
-    font-family: var(--fonte-titulos);
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-header nav {
-    margin-top: 1rem;
-}
-
-main > h1 {
-    text-align: center;
-    margin-bottom: 2rem;
+  .wf-linha {
+    flex-direction: column;
+  }
 }
