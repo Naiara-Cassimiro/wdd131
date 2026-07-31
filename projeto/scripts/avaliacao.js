@@ -3,7 +3,7 @@ function obterContador() {
 }
 
 function salvarContador(valor) {
-  localStorage.setItem("contadorAvaliacoes", valor);
+  localStorage.setItem("contadorAvaliacoes", String(valor));
 }
 
 function atualizarRodape() {
@@ -15,16 +15,17 @@ function atualizarRodape() {
   }
 
   if (ultimaModificacao) {
-    ultimaModificacao.textContent =
-      `Última modificação: ${document.lastModified}`;
+    ultimaModificacao.textContent = `Última modificação: ${document.lastModified}`;
   }
 }
 
-let contador = obterContador();
-contador++;
+const contadorAvaliacoes = document.querySelector("#contador-avaliacoes");
+const novoTotal = obterContador() + 1;
 
-salvarContador(contador);
+salvarContador(novoTotal);
 
-document.querySelector("#contador-avaliacoes").textContent = contador;
+if (contadorAvaliacoes) {
+  contadorAvaliacoes.textContent = novoTotal;
+}
 
 atualizarRodape();
