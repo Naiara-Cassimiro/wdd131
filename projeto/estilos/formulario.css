@@ -1,0 +1,207 @@
+:root {
+  --cor-primaria: #2b1055;
+  --cor-secundaria: #d4af37;
+  --cor-fundo: #f5f2e8;
+  --cor-superficie: #ffffff;
+  --cor-texto: #2e2e2e;
+  --fonte-titulos: 'Playfair Display', Georgia, serif;
+  --fonte-corpo: 'Poppins', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--fonte-titulos);
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+header p {
+  margin: 0.3rem 0 0;
+  color: var(--cor-secundaria);
+  font-style: italic;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.cartao {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 8px;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+h2 {
+  font-family: var(--fonte-titulos);
+  color: var(--cor-primaria);
+  border-bottom: 3px solid var(--cor-secundaria);
+  padding-bottom: 0.4rem;
+}
+
+.campo {
+  margin-bottom: 1.4rem;
+}
+
+.campo > label {
+  display: block;
+  font-weight: 600;
+  color: var(--cor-primaria);
+  margin-bottom: 0.4rem;
+}
+
+select,
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--cor-secundaria);
+  outline-offset: 1px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+fieldset {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+}
+
+legend {
+  font-weight: 600;
+  color: var(--cor-primaria);
+  padding: 0 0.4rem;
+}
+
+.estrelas {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  font-size: 1.8rem;
+}
+
+.estrelas input[type="radio"] {
+  display: none;
+}
+
+.estrelas label {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.estrelas input[type="radio"]:checked ~ label,
+.estrelas label:hover,
+.estrelas label:hover ~ label {
+  color: var(--cor-secundaria);
+}
+
+.checkbox-grupo label,
+.checkbox-grupo {
+  font-weight: 400;
+}
+
+.checkbox-grupo div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.checkbox-grupo input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.opcional {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+input[type="submit"] {
+  background-color: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-family: var(--fonte-corpo);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
+}
+
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.85rem;
+}
+
+/* ------- Página de confirmação (avaliacao.html) ------- */
+.confirmacao {
+  text-align: center;
+}
+
+.confirmacao .icone {
+  font-size: 3rem;
+}
+
+.contador {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--cor-fundo);
+  border: 1px dashed var(--cor-secundaria);
+  border-radius: 6px;
+  padding: 0.8rem 1.2rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.confirmacao a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--cor-primaria);
+  font-weight: 600;
+}

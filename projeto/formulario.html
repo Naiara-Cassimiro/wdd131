@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Clube - Avaliação de Produto</title>
+    <meta name="description" content="Formulário de avaliação de produto do Enigma Clube.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/formulario.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🔎 Enigma Clube</h1>
+        <p>Avaliação de Produto</p>
+    </header>
+
+    <main>
+        <div class="cartao">
+            <h2>Conte sua experiência</h2>
+
+            <form action="avaliacao.html" method="get">
+
+                <div class="campo">
+                    <label for="produto">Nome do Produto</label>
+                    <select id="produto" name="produto" required>
+                        <option value="" disabled selected>Selecione um Produto...</option>
+                        <!-- Opções adicionadas dinamicamente via JavaScript (scripts/formulario.js) -->
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label id="label-classificacao">Classificação Geral</label>
+                    <fieldset class="estrelas" aria-labelledby="label-classificacao">
+                        <input type="radio" id="estrela5" name="classificacao" value="5" required>
+                        <label for="estrela5" title="5 estrelas">★</label>
+
+                        <input type="radio" id="estrela4" name="classificacao" value="4">
+                        <label for="estrela4" title="4 estrelas">★</label>
+
+                        <input type="radio" id="estrela3" name="classificacao" value="3">
+                        <label for="estrela3" title="3 estrelas">★</label>
+
+                        <input type="radio" id="estrela2" name="classificacao" value="2">
+                        <label for="estrela2" title="2 estrelas">★</label>
+
+                        <input type="radio" id="estrela1" name="classificacao" value="1">
+                        <label for="estrela1" title="1 estrela">★</label>
+                    </fieldset>
+                </div>
+
+                <div class="campo">
+                    <label for="data-instalacao">Data de Instalação</label>
+                    <input type="date" id="data-instalacao" name="data-instalacao" required>
+                </div>
+
+                <div class="campo">
+                    <label id="label-recursos">Recursos Úteis</label>
+                    <fieldset class="checkbox-grupo" aria-labelledby="label-recursos">
+                        <div>
+                            <input type="checkbox" id="recurso-instalacao" name="recursos" value="facil-instalacao">
+                            <label for="recurso-instalacao">Fácil instalação</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="recurso-suporte" name="recursos" value="suporte-tecnico">
+                            <label for="recurso-suporte">Bom suporte técnico</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="recurso-durabilidade" name="recursos" value="durabilidade">
+                            <label for="recurso-durabilidade">Durabilidade</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="recurso-custo" name="recursos" value="custo-beneficio">
+                            <label for="recurso-custo">Bom custo-benefício</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="campo">
+                    <label for="avaliacao-escrita">Avaliação Escrita <span class="opcional">(opcional)</span></label>
+                    <textarea id="avaliacao-escrita" name="avaliacao-escrita"></textarea>
+                </div>
+
+                <div class="campo">
+                    <label for="nome-usuario">Nome de Usuário <span class="opcional">(opcional)</span></label>
+                    <input type="text" id="nome-usuario" name="nome-usuario">
+                </div>
+
+                <div class="campo">
+                    <input type="submit" value="Enviar Avaliação">
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Enigma Clube — Projeto WDD 131</p>
+    </footer>
+
+    <script src="scripts/formulario.js" defer></script>
+</body>
+
+</html>
