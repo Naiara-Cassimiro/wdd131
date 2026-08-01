@@ -38,9 +38,19 @@
         <div class="cartao">
             <h2>Conte sua experiência</h2>
 
+            <p class="informacao-obrigatoria">
+                Os campos marcados com
+                <span class="obrigatorio">*</span>
+                são obrigatórios.
+            </p>
+
             <form action="avaliacao.html" method="get">
                 <div class="campo">
-                    <label for="produto">Nome do Produto</label>
+
+                    <label for="produto">
+                        Nome do Produto
+                        <span class="obrigatorio">*</span>
+                    </label>
 
                     <select id="produto" name="produto" required>
                         <option value="" disabled selected>Select a Product ...</option>
@@ -49,7 +59,10 @@
                 </div>
 
                 <fieldset class="campo">
-                    <legend>Classificação Geral</legend>
+                    <legend>
+                        Classificação Geral
+                        <span class="obrigatorio">*</span>
+                    </legend>
 
                     <div class="estrelas">
                         <input type="radio" id="estrela5" name="classificacao" value="5" required>
@@ -88,6 +101,7 @@
                 <div class="campo">
                     <label for="data-instalacao">
                         Data de Instalação ou Utilização
+                        <span class="obrigatorio">*</span>
                     </label>
 
                     <input type="date" id="data-instalacao" name="data-instalacao" required>

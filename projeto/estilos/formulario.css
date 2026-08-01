@@ -31,6 +31,14 @@ header {
   text-align: center;
 }
 
+header .logo {
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
 header h1 {
   margin: 0;
   font-family: var(--fonte-titulos);
@@ -308,4 +316,15 @@ footer p {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+.obrigatorio {
+    color: #c62828;
+    font-weight: 700;
+}
+
+.informacao-obrigatoria {
+    margin: 0 0 1.5rem;
+    color: var(--cor-cinza);
+    font-size: 0.9rem;
 }

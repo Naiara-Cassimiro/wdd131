@@ -47,6 +47,14 @@ header .logo {
   letter-spacing: 1px;
 }
 
+header .logo {
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
 header .subtitulo {
   margin: 0.3rem 0 0;
   color: var(--cor-secundaria);
@@ -303,17 +311,18 @@ footer {
 
 @media screen and (max-width: 600px) {
   header .logo {
+    width: 90px;
+    height: auto;
+  }
+
+  header h1 {
     font-size: 1.5rem;
   }
 
   nav ul {
     flex-direction: column;
-    align-items: stretch;
-  }
-
-  nav a {
-    width: 100%;
-    text-align: center;
+    align-items: center;
+    gap: 0.4rem;
   }
 
   main {
@@ -322,13 +331,5 @@ footer {
 
   section {
     padding: 1rem;
-  }
-
-  .wf-desktop {
-    width: 100%;
-  }
-
-  .wf-linha {
-    flex-direction: column;
   }
 }
