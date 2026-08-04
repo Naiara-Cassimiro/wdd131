@@ -1,0 +1,335 @@
+/* ===========================================================
+   Enigma Clube — Documento de Planejamento do Site
+   Esquema de cores e tipografia aplicados neste documento
+   =========================================================== */
+
+:root {
+  --cor-primaria: #2b1055;
+  --cor-secundaria: #d4af37;
+  --cor-fundo: #f5f2e8;
+  --cor-superficie: #ffffff;
+  --cor-texto: #2e2e2e;
+  --cor-borda: #cccccc;
+  --cor-wireframe: #fafafa;
+  --cor-wireframe-caixa: #e4e0f0;
+
+  --fonte-titulos: "Playfair Display", Georgia, serif;
+  --fonte-corpo: "Poppins", Arial, sans-serif;
+}
+
+/* ---------- Configurações gerais ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  line-height: 1.6;
+}
+
+/* ---------- Cabeçalho ---------- */
+
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  padding: 1.5rem 1rem 0;
+  text-align: center;
+}
+
+header .logo {
+  margin: 0;
+  font-family: var(--fonte-titulos);
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+header .logo {
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+header .subtitulo {
+  margin: 0.3rem 0 0;
+  color: var(--cor-secundaria);
+  font-style: italic;
+}
+
+.auditoria-titulo {
+  margin: 0.5rem 0 1rem;
+  color: var(--cor-fundo);
+  font-family: var(--fonte-titulos);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* ---------- Navegação ---------- */
+
+header nav {
+  margin: 1rem -1rem 0;
+}
+
+nav {
+  background-color: var(--cor-secundaria);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0.6rem;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--cor-primaria);
+  color: var(--cor-superficie);
+  text-decoration: underline;
+}
+
+/* ---------- Conteúdo principal ---------- */
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+main > h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 8px;
+  background-color: var(--cor-superficie);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--cor-primaria);
+  font-family: var(--fonte-titulos);
+}
+
+h2 {
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--cor-secundaria);
+}
+
+.criterio-numero {
+  color: var(--cor-secundaria);
+  font-weight: 700;
+}
+
+.exemplo {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid var(--cor-secundaria);
+  background-color: var(--cor-fundo);
+  font-style: italic;
+}
+
+.nota-espacada {
+  margin-top: 1rem;
+}
+
+/* ---------- Amostras de cor ---------- */
+
+.paleta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.amostra {
+  flex: 1 1 200px;
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+}
+
+.amostra .cor {
+  height: 70px;
+}
+
+.amostra .legenda {
+  padding: 0.6rem 0.8rem;
+  background-color: var(--cor-superficie);
+  font-size: 0.9rem;
+}
+
+.cor-primaria {
+  background-color: var(--cor-primaria);
+}
+
+.cor-secundaria {
+  background-color: var(--cor-secundaria);
+}
+
+.cor-fundo-amostra {
+  border-bottom: 1px solid var(--cor-borda);
+  background-color: var(--cor-fundo);
+}
+
+.cor-texto-amostra {
+  background-color: var(--cor-texto);
+}
+
+/* ---------- Amostras de tipografia ---------- */
+
+.tipografia-amostra {
+  margin-top: 1rem;
+}
+
+.tipografia-amostra .titulo-fonte {
+  color: var(--cor-primaria);
+  font-family: var(--fonte-titulos);
+  font-size: 1.8rem;
+}
+
+.tipografia-amostra .corpo-fonte {
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+}
+
+/* ---------- Wireframes ---------- */
+
+.wireframes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.wireframe-bloco h3 {
+  text-align: center;
+}
+
+.wf {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border: 2px solid var(--cor-primaria);
+  background-color: var(--cor-wireframe);
+}
+
+.wf-mobile {
+  width: 220px;
+}
+
+.wf-desktop {
+  width: 560px;
+  max-width: 100%;
+}
+
+.wf-caixa {
+  padding: 6px 4px;
+  border: 1px dashed var(--cor-primaria);
+  background-color: var(--cor-wireframe-caixa);
+  color: var(--cor-primaria);
+  font-family: var(--fonte-corpo);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.wf-header {
+  padding: 10px 4px;
+  border: none;
+  background-color: var(--cor-primaria);
+  color: var(--cor-superficie);
+}
+
+.wf-nav {
+  border: none;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
+}
+
+.wf-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.wf-linha {
+  display: flex;
+  gap: 6px;
+}
+
+.wf-linha .wf-caixa {
+  flex: 1;
+}
+
+.wf-footer {
+  border: none;
+  background-color: var(--cor-primaria);
+  color: var(--cor-superficie);
+}
+
+/* ---------- Rodapé ---------- */
+
+footer {
+  padding: 1.2rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ---------- Responsividade ---------- */
+
+@media screen and (max-width: 600px) {
+  header .logo {
+    width: 90px;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  main {
+    padding: 1rem 0.7rem 2rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
