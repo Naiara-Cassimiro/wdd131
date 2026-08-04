@@ -5,8 +5,8 @@
   --cor-superficie: #ffffff;
   --cor-texto: #2e2e2e;
   --cor-borda: #b8b8b8;
-  --cor-cinza: #666666;
-  --cor-estrela-inativa: #cccccc;
+  --cor-cinza: #565656;
+  --cor-estrela-inativa: #737373;
   --fonte-titulos: "Playfair Display", Georgia, serif;
   --fonte-corpo: "Poppins", Arial, sans-serif;
 }
@@ -282,7 +282,8 @@ footer p {
 }
 
 .confirmacao a:hover {
-  color: #6b4c00;
+  color: var(--cor-primaria);
+  text-decoration: underline;
 }
 
 /* Responsividade */
