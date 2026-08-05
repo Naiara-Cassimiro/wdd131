@@ -54,7 +54,7 @@
                     </select>
                 </div>
 
-                <<fieldset class="campo">
+                <fieldset class="campo">
                     <legend>
                         Classificação Geral
                         <span class="obrigatorio">*</span>
@@ -91,79 +91,79 @@
                             <span class="sr-only">1 estrela</span>
                         </label>
                     </div>
-                    </fieldset>
+                </fieldset>
 
-                    <div class="campo">
-                        <label for="data-instalacao">
-                            Data de Instalação ou Utilização
-                            <span class="obrigatorio">*</span>
-                        </label>
+                <div class="campo">
+                    <label for="data-instalacao">
+                        Data de Instalação ou Utilização
+                        <span class="obrigatorio">*</span>
+                    </label>
 
-                        <input type="date" id="data-instalacao" name="data-instalacao" required>
-                    </div>
+                    <input type="date" id="data-instalacao" name="data-instalacao" required>
+                </div>
 
-                    <fieldset class="campo">
-                        <legend>
-                            Recursos Úteis
-                            <span class="opcional">
-                                (marque todas as opções aplicáveis)
-                            </span>
-                        </legend>
+                <fieldset class="campo">
+                    <legend>
+                        Recursos Úteis
+                        <span class="opcional">
+                            (marque todas as opções aplicáveis)
+                        </span>
+                    </legend>
 
-                        <div class="checkbox-grupo">
-                            <div>
-                                <input type="checkbox" id="recurso-instalacao" name="recursos" value="facil-instalacao">
-                                <label for="recurso-instalacao">
-                                    Fácil instalação
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="checkbox" id="recurso-suporte" name="recursos" value="suporte-tecnico">
-                                <label for="recurso-suporte">
-                                    Bom suporte técnico
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="checkbox" id="recurso-durabilidade" name="recursos" value="durabilidade">
-                                <label for="recurso-durabilidade">
-                                    Durabilidade
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="checkbox" id="recurso-custo" name="recursos" value="custo-beneficio">
-                                <label for="recurso-custo">
-                                    Bom custo-benefício
-                                </label>
-                            </div>
+                    <div class="checkbox-grupo">
+                        <div>
+                            <input type="checkbox" id="recurso-instalacao" name="recursos" value="facil-instalacao">
+                            <label for="recurso-instalacao">
+                                Fácil instalação
+                            </label>
                         </div>
-                    </fieldset>
 
-                    <div class="campo">
-                        <label for="avaliacao-escrita">
-                            Avaliação Escrita
-                            <span class="opcional">(opcional)</span>
-                        </label>
+                        <div>
+                            <input type="checkbox" id="recurso-suporte" name="recursos" value="suporte-tecnico">
+                            <label for="recurso-suporte">
+                                Bom suporte técnico
+                            </label>
+                        </div>
 
-                        <textarea id="avaliacao-escrita" name="avaliacao-escrita" rows="6"
-                            placeholder="Conte como foi sua experiência com o produto..."></textarea>
+                        <div>
+                            <input type="checkbox" id="recurso-durabilidade" name="recursos" value="durabilidade">
+                            <label for="recurso-durabilidade">
+                                Durabilidade
+                            </label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="recurso-custo" name="recursos" value="custo-beneficio">
+                            <label for="recurso-custo">
+                                Bom custo-benefício
+                            </label>
+                        </div>
                     </div>
+                </fieldset>
 
-                    <div class="campo">
-                        <label for="nome-usuario">
-                            Nome de Usuário
-                            <span class="opcional">(opcional)</span>
-                        </label>
+                <div class="campo">
+                    <label for="avaliacao-escrita">
+                        Avaliação Escrita
+                        <span class="opcional">(opcional)</span>
+                    </label>
 
-                        <input type="text" id="nome-usuario" name="nome-usuario" autocomplete="name"
-                            placeholder="Digite seu nome">
-                    </div>
+                    <textarea id="avaliacao-escrita" name="avaliacao-escrita" rows="6"
+                        placeholder="Conte como foi sua experiência com o produto..."></textarea>
+                </div>
 
-                    <div class="campo">
-                        <input type="submit" value="Enviar Avaliação">
-                    </div>
+                <div class="campo">
+                    <label for="nome-usuario">
+                        Nome de Usuário
+                        <span class="opcional">(opcional)</span>
+                    </label>
+
+                    <input type="text" id="nome-usuario" name="nome-usuario" autocomplete="name"
+                        placeholder="Digite seu nome">
+                </div>
+
+                <div class="campo">
+                    <input type="submit" value="Enviar Avaliação">
+                </div>
             </form>
         </div>
     </main>
