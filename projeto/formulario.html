@@ -44,7 +44,6 @@
 
             <form action="avaliacao.html" method="get">
                 <div class="campo">
-
                     <label for="produto">
                         Nome do Produto
                         <span class="obrigatorio">*</span>
@@ -53,7 +52,6 @@
                     <select id="produto" name="produto" required>
                         <option value="" disabled selected>Select a Product ...</option>
                     </select>
-
                 </div>
 
                 <fieldset class="campo">
@@ -63,18 +61,36 @@
                     </legend>
 
                     <div class="estrelas">
-                        <label for="estrela5" aria-label="5 estrelas">★</label>
+                        <input type="radio" id="estrela5" name="classificacao" value="5" required>
+                        <label for="estrela5">
+                            ★
+                            <span class="sr-only">5 estrelas</span>
+                        </label>
 
-                        <label for="estrela4" aria-label="4 estrelas">★</label>
+                        <input type="radio" id="estrela4" name="classificacao" value="4" required>
+                        <label for="estrela4">
+                            ★
+                            <span class="sr-only">4 estrelas</span>
+                        </label>
 
-                        <label for="estrela3" aria-label="3 estrelas">★</label>
+                        <input type="radio" id="estrela3" name="classificacao" value="3" required>
+                        <label for="estrela3">
+                            ★
+                            <span class="sr-only">3 estrelas</span>
+                        </label>
 
-                        <label for="estrela2" aria-label="2 estrelas">★</label>
+                        <input type="radio" id="estrela2" name="classificacao" value="2" required>
+                        <label for="estrela2">
+                            ★
+                            <span class="sr-only">2 estrelas</span>
+                        </label>
 
-                        <label for="estrela1" aria-label="1 estrela">★</label>
-
+                        <input type="radio" id="estrela1" name="classificacao" value="1" required>
+                        <label for="estrela1">
+                            ★
+                            <span class="sr-only">1 estrela</span>
+                        </label>
                     </div>
-
                 </fieldset>
 
                 <div class="campo">
