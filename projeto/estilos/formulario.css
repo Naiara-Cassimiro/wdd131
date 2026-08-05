@@ -15,6 +15,13 @@
   box-sizing: border-box;
 }
 
+header .logo {
+    display: block;
+    width: 140px;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -270,9 +277,10 @@ footer p {
 /* Responsividade */
 
 @media screen and (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
+    header .logo {
+        width: 90px;
+    }
+}
 
   main {
     width: min(100% - 1.2rem, 640px);
