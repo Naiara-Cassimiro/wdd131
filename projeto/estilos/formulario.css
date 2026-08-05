@@ -18,6 +18,7 @@
 header .logo {
     display: block;
     width: 140px;
+    max-width: 100%;
     height: auto;
     margin: 0 auto 1rem;
 }
@@ -277,10 +278,14 @@ footer p {
 /* Responsividade */
 
 @media screen and (max-width: 480px) {
+
     header .logo {
         width: 90px;
     }
-}
+
+    header h1 {
+        font-size: 1.5rem;
+    }
 
   main {
     width: min(100% - 1.2rem, 640px);
