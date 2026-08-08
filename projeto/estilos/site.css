@@ -404,9 +404,12 @@ a {
 }
 
 .cartao-enigma {
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
   padding: 1.5rem;
   border: 1px solid var(--cor-borda);
-  border-top: 5px solid var(--cor-secundaria);
+  border-top: 4px solid var(--cor-secundaria);
   border-radius: 10px;
   background-color: var(--cor-superficie);
   box-shadow: 0 5px 16px rgb(43 16 85 / 8%);
@@ -417,7 +420,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .categoria-enigma,
@@ -437,252 +440,6 @@ a {
 .dificuldade-enigma {
   background-color: var(--cor-destaque-suave);
   color: var(--cor-primaria);
-}
-
-.cartao-enigma h3 {
-  margin: 0 0 0.7rem;
-  color: var(--cor-primaria);
-  font-family: var(--fonte-titulos);
-  font-size: 1.4rem;
-}
-
-.cartao-enigma p {
-  margin: 0 0 1rem;
-}
-
-.botao-resposta {
-  min-height: 44px;
-  padding: 0.7rem 1rem;
-  border: 2px solid var(--cor-primaria);
-  border-radius: 6px;
-  background-color: var(--cor-primaria);
-  color: var(--cor-texto-claro);
-  cursor: pointer;
-  font-family: var(--fonte-corpo);
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.botao-resposta:hover {
-  background-color: var(--cor-secundaria);
-  color: var(--cor-primaria);
-  transform: translateY(-2px);
-}
-
-.botao-resposta:focus {
-  outline: 3px solid var(--cor-secundaria);
-  outline-offset: 3px;
-}
-
-.resposta-enigma {
-  margin-top: 1rem;
-  padding: 1rem;
-  border-left: 4px solid var(--cor-secundaria);
-  border-radius: 4px;
-  background-color: var(--cor-destaque-suave);
-  color: var(--cor-texto);
-}
-
-.resposta-enigma[hidden] {
-  display: none;
-}
-
-.favoritos {
-  padding-top: 1rem;
-}
-
-.favoritos > p {
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  text-align: center;
-}
-
-/* =========================
-   RODAPÉ
-   ========================= */
-
-.rodape-principal {
-  background-color: var(--cor-primaria);
-  color: var(--cor-texto-claro);
-}
-
-.rodape-conteudo {
-  width: min(100% - 2rem, var(--largura-maxima));
-  margin: 0 auto;
-  padding: 1.5rem 0;
-  text-align: center;
-}
-
-.rodape-conteudo p {
-  margin: 0.35rem 0;
-}
-
-.rodape-conteudo a {
-  color: var(--cor-secundaria);
-  font-weight: 600;
-}
-
-.rodape-conteudo a:hover,
-.rodape-conteudo a:focus {
-  color: var(--cor-texto-claro);
-}
-
-/* =========================
-   TABLET E DESKTOP
-   ========================= */
-
-@media screen and (min-width: 700px) {
-  .cabecalho-conteudo {
-    flex-wrap: nowrap;
-  }
-
-  .logo {
-    width: 105px;
-  }
-
-  .botao-menu {
-    display: none;
-  }
-
-  .navegacao-principal {
-    display: block;
-    width: auto;
-  }
-
-  .navegacao-principal ul {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0;
-  }
-
-  .navegacao-principal li {
-    margin: 0;
-  }
-
-  .grade-categorias {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grade-enigmas {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .grade-categorias {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .grade-enigmas {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .hero-conteudo {
-    padding: 5.5rem 0;
-  }
-}
-
-.acoes-enigma {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 1.2rem;
-}
-
-.botao-resposta,
-.botao-favorito {
-  min-height: 44px;
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: var(--fonte-corpo);
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.botao-resposta {
-  border: 2px solid var(--cor-primaria);
-  background-color: var(--cor-primaria);
-  color: var(--cor-texto-claro);
-}
-
-.botao-favorito {
-  border: 2px solid var(--cor-secundaria);
-  background-color: var(--cor-superficie);
-  color: #8a6300;
-}
-
-.botao-resposta:hover,
-.botao-favorito:hover {
-  transform: translateY(-2px);
-}
-
-.botao-resposta:hover {
-  background-color: var(--cor-secundaria);
-  color: var(--cor-primaria);
-}
-
-.botao-favorito:hover {
-  background-color: var(--cor-secundaria);
-  color: var(--cor-primaria);
-}
-
-.botao-resposta:focus,
-.botao-favorito:focus {
-  outline: 3px solid var(--cor-secundaria);
-  outline-offset: 3px;
-}
-
-.botao-favorito[aria-pressed="true"] {
-  background-color: var(--cor-secundaria);
-  color: var(--cor-primaria);
-}
-
-.mensagem-vazia {
-  grid-column: 1 / -1;
-  margin: 0 auto;
-  padding: 1.2rem 1.5rem;
-  border: 1px dashed var(--cor-borda);
-  border-radius: 8px;
-  background-color: var(--cor-superficie);
-  color: var(--cor-texto);
-  font-weight: 600;
-  text-align: center;
-}
-
-.grade-enigmas {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.2rem;
-}
-
-.cartao-enigma {
-  display: flex;
-  flex-direction: column;
-  min-height: 330px;
-  padding: 1.5rem;
-  border: 1px solid var(--cor-borda);
-  border-top: 4px solid var(--cor-secundaria);
-  border-radius: 10px;
-  background-color: var(--cor-superficie);
-  box-shadow: 0 5px 16px rgb(43 16 85 / 8%);
-}
-
-.cartao-enigma-topo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.8rem;
 }
 
 .cartao-enigma h3 {
@@ -798,4 +555,114 @@ a {
 
 .resposta-enigma[hidden] {
   display: none;
+}
+
+.favoritos {
+  padding-top: 1rem;
+}
+
+.favoritos > p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.mensagem-vazia {
+  grid-column: 1 / -1;
+  margin: 0 auto;
+  padding: 1.2rem 1.5rem;
+  border: 1px dashed var(--cor-borda);
+  border-radius: 8px;
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* =========================
+   RODAPÉ
+   ========================= */
+
+.rodape-principal {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+
+.rodape-conteudo {
+  width: min(100% - 2rem, var(--largura-maxima));
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.rodape-conteudo p {
+  margin: 0.35rem 0;
+}
+
+.rodape-conteudo a {
+  color: var(--cor-secundaria);
+  font-weight: 600;
+}
+
+.rodape-conteudo a:hover,
+.rodape-conteudo a:focus {
+  color: var(--cor-texto-claro);
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+/* Tablet */
+@media screen and (min-width: 700px) {
+  .cabecalho-conteudo {
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    width: 105px;
+  }
+
+  .botao-menu {
+    display: none;
+  }
+
+  .navegacao-principal {
+    display: block;
+    width: auto;
+  }
+
+  .navegacao-principal ul {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0;
+  }
+
+  .navegacao-principal li {
+    margin: 0;
+  }
+
+  .grade-categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grade-enigmas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1000px) {
+  .grade-categorias {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grade-enigmas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero-conteudo {
+    padding: 5.5rem 0;
+  }
 }
