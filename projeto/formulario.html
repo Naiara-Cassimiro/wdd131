@@ -5,177 +5,285 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Revisão de Produto | Enigma Clube</title>
+    <title>Avaliar | Enigma Clube</title>
 
     <meta name="description"
-        content="Formulário de revisão de produto do Enigma Clube, desenvolvido para o projeto da disciplina WDD 131.">
+        content="Avalie sua experiência com o Enigma Clube e compartilhe sua opinião sobre os desafios e recursos disponíveis.">
+
     <meta name="author" content="Naiara Cassimiro">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
         rel="stylesheet">
 
+    <!-- Estilo geral do projeto -->
+    <link rel="stylesheet" href="estilos/site.css">
+
+    <!-- Estilo específico do formulário -->
     <link rel="stylesheet" href="estilos/formulario.css">
 
+    <!-- JavaScript geral -->
+    <script src="scripts/site.js" defer></script>
+
+    <!-- JavaScript específico do formulário -->
     <script src="scripts/formulario.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <img src="imagem/logo-enigma.webp" alt="Logotipo do Enigma Clube" class="logo" width="140" height="140">
+    <header class="cabecalho-principal">
+        <div class="cabecalho-conteudo">
 
-        <h1>Revisão de Produto</h1>
-        <p>Enigma Clube</p>
+            <a href="index.html" class="marca" aria-label="Página inicial do Enigma Clube">
+                <img src="imagem/logo-enigma.webp" alt="Logotipo do Enigma Clube" class="logo" width="120" height="120">
+            </a>
+
+            <button type="button" class="botao-menu" id="botao-menu" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="menu-principal">
+                ☰
+            </button>
+
+            <nav id="menu-principal" class="navegacao-principal" aria-label="Navegação principal">
+                <ul>
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="enigmas.html">Enigmas</a>
+                    </li>
+
+                    <li>
+                        <a href="formulario.html" aria-current="page">
+                            Avaliar
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
     <main>
-        <div class="cartao">
-            <h2>Conte sua experiência</h2>
 
-            <p class="informacao-obrigatoria">
-                Os campos marcados com
-                <span class="obrigatorio">*</span>
-                são obrigatórios.
-            </p>
+        <section class="cabecalho-pagina">
+            <div class="cabecalho-pagina-conteudo">
 
-            <form action="avaliacao.html" method="get">
-                <div class="campo">
-                    <label for="produto">
-                        Nome do Produto
-                        <span class="obrigatorio">*</span>
-                    </label>
+                <p class="secao-destaque">
+                    Sua opinião é importante
+                </p>
 
-                    <select id="produto" name="produto" required>
-                        <option value="" selected disabled>Selecione um produto...</option>
-                    </select>
-                </div>
+                <h1>Avalie sua experiência</h1>
 
-                <fieldset class="campo">
-                    <legend>
-                        Classificação Geral
-                        <span class="obrigatorio">*</span>
-                    </legend>
+                <p>
+                    Conte como foi sua experiência com o Enigma Clube.
+                    Seu feedback nos ajuda a criar desafios cada vez melhores.
+                </p>
 
-                    <div class="estrelas">
-                        <input type="radio" id="estrela5" name="classificacao" value="5" required>
-                        <label for="estrela5">
-                            <span aria-hidden="true">★</span>
-                            <span class="sr-only">5 estrelas</span>
+            </div>
+        </section>
+
+        <section class="secao" aria-labelledby="titulo-formulario">
+
+            <div class="cartao">
+
+                <h2 id="titulo-formulario">
+                    Conte sua experiência
+                </h2>
+
+                <p class="informacao-obrigatoria">
+                    Os campos marcados com
+                    <span class="obrigatorio">*</span>
+                    são obrigatórios.
+                </p>
+
+                <form action="avaliacao.html" method="get">
+
+                    <div class="campo">
+
+                        <label for="produto">
+                            Nome do Produto
+                            <span class="obrigatorio">*</span>
                         </label>
 
-                        <input type="radio" id="estrela4" name="classificacao" value="4" required>
-                        <label for="estrela4">
-                            <span aria-hidden="true">★</span>
-                            <span class="sr-only">4 estrelas</span>
-                        </label>
+                        <select id="produto" name="produto" required>
+                            <option value="" selected disabled>
+                                Selecione um produto ...
+                            </option>
+                        </select>
 
-                        <input type="radio" id="estrela3" name="classificacao" value="3" required>
-                        <label for="estrela3">
-                            <span aria-hidden="true">★</span>
-                            <span class="sr-only">3 estrelas</span>
-                        </label>
-
-                        <input type="radio" id="estrela2" name="classificacao" value="2" required>
-                        <label for="estrela2">
-                            <span aria-hidden="true">★</span>
-                            <span class="sr-only">2 estrelas</span>
-                        </label>
-
-                        <input type="radio" id="estrela1" name="classificacao" value="1" required>
-                        <label for="estrela1">
-                            <span aria-hidden="true">★</span>
-                            <span class="sr-only">1 estrela</span>
-                        </label>
                     </div>
-                </fieldset>
 
-                <div class="campo">
-                    <label for="data-instalacao">
-                        Data de Instalação ou Utilização
-                        <span class="obrigatorio">*</span>
-                    </label>
+                    <fieldset class="campo">
 
-                    <input type="date" id="data-instalacao" name="data-instalacao" required>
-                </div>
+                        <legend>
+                            Classificação Geral
+                            <span class="obrigatorio">*</span>
+                        </legend>
 
-                <fieldset class="campo">
-                    <legend>
-                        Recursos Úteis
-                        <span class="opcional">
-                            (marque todas as opções aplicáveis)
-                        </span>
-                    </legend>
+                        <div class="estrelas">
 
-                    <div class="checkbox-grupo">
-                        <div>
-                            <input type="checkbox" id="recurso-instalacao" name="recursos" value="facil-instalacao">
-                            <label for="recurso-instalacao">
-                                Fácil instalação
+                            <input type="radio" id="estrela5" name="classificacao" value="5" required>
+
+                            <label for="estrela5">
+                                <span aria-hidden="true">★</span>
+                                <span class="sr-only">5 estrelas</span>
                             </label>
+
+                            <input type="radio" id="estrela4" name="classificacao" value="4" required>
+
+                            <label for="estrela4">
+                                <span aria-hidden="true">★</span>
+                                <span class="sr-only">4 estrelas</span>
+                            </label>
+
+                            <input type="radio" id="estrela3" name="classificacao" value="3" required>
+
+                            <label for="estrela3">
+                                <span aria-hidden="true">★</span>
+                                <span class="sr-only">3 estrelas</span>
+                            </label>
+
+                            <input type="radio" id="estrela2" name="classificacao" value="2" required>
+
+                            <label for="estrela2">
+                                <span aria-hidden="true">★</span>
+                                <span class="sr-only">2 estrelas</span>
+                            </label>
+
+                            <input type="radio" id="estrela1" name="classificacao" value="1" required>
+
+                            <label for="estrela1">
+                                <span aria-hidden="true">★</span>
+                                <span class="sr-only">1 estrela</span>
+                            </label>
+
                         </div>
 
-                        <div>
-                            <input type="checkbox" id="recurso-suporte" name="recursos" value="suporte-tecnico">
-                            <label for="recurso-suporte">
-                                Bom suporte técnico
-                            </label>
-                        </div>
+                    </fieldset>
 
-                        <div>
-                            <input type="checkbox" id="recurso-durabilidade" name="recursos" value="durabilidade">
-                            <label for="recurso-durabilidade">
-                                Durabilidade
-                            </label>
-                        </div>
+                    <div class="campo">
 
-                        <div>
-                            <input type="checkbox" id="recurso-custo" name="recursos" value="custo-beneficio">
-                            <label for="recurso-custo">
-                                Bom custo-benefício
-                            </label>
-                        </div>
+                        <label for="data-instalacao">
+                            Data de Utilização
+                            <span class="obrigatorio">*</span>
+                        </label>
+
+                        <input type="date" id="data-instalacao" name="data-instalacao" required>
+
                     </div>
-                </fieldset>
 
-                <div class="campo">
-                    <label for="avaliacao-escrita">
-                        Avaliação Escrita
-                        <span class="opcional">(opcional)</span>
-                    </label>
+                    <fieldset class="campo">
 
-                    <textarea id="avaliacao-escrita" name="avaliacao-escrita" rows="6"
-                        placeholder="Conte como foi sua experiência com o produto..."></textarea>
-                </div>
+                        <legend>
+                            Recursos Úteis
 
-                <div class="campo">
-                    <label for="nome-usuario">
-                        Nome de Usuário
-                        <span class="opcional">(opcional)</span>
-                    </label>
+                            <span class="opcional">
+                                (marque todas as opções aplicáveis)
+                            </span>
+                        </legend>
 
-                    <input type="text" id="nome-usuario" name="nome-usuario" autocomplete="name"
-                        placeholder="Digite seu nome">
-                </div>
+                        <div class="checkbox-grupo">
 
-                <div class="campo">
-                    <input type="submit" value="Enviar Avaliação">
-                </div>
-            </form>
-        </div>
+                            <div>
+                                <input type="checkbox" id="recurso-instalacao" name="recursos" value="facil-instalacao">
+
+                                <label for="recurso-instalacao">
+                                    Fácil utilização
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="recurso-suporte" name="recursos" value="suporte-tecnico">
+
+                                <label for="recurso-suporte">
+                                    Navegação intuitiva
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="recurso-durabilidade" name="recursos" value="durabilidade">
+
+                                <label for="recurso-durabilidade">
+                                    Desafios interessantes
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="recurso-custo" name="recursos" value="custo-beneficio">
+
+                                <label for="recurso-custo">
+                                    Design agradável
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                    <div class="campo">
+
+                        <label for="avaliacao-escrita">
+                            Avaliação Escrita
+                            <span class="opcional">(opcional)</span>
+                        </label>
+
+                        <textarea id="avaliacao-escrita" name="avaliacao-escrita" rows="6"
+                            placeholder="Conte como foi sua experiência com o Enigma Clube..."></textarea>
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="nome-usuario">
+                            Nome
+                            <span class="opcional">(opcional)</span>
+                        </label>
+
+                        <input type="text" id="nome-usuario" name="nome-usuario" autocomplete="name"
+                            placeholder="Digite seu nome">
+
+                    </div>
+
+                    <div class="campo">
+
+                        <input type="submit" value="Enviar Avaliação">
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>
-            &copy; <span id="ano-atual"></span> |
-            Naiara Cassimiro | Brasil
-        </p>
+    <footer class="rodape-principal">
 
-        <p id="ultima-modificacao"></p>
+        <div class="rodape-conteudo">
+
+            <p>
+                &copy;
+                <span id="ano-atual"></span>
+                Enigma Clube | Naiara Cassimiro | WDD 131
+            </p>
+
+            <p>
+                <a href="referencias.html">
+                    Referências
+                </a>
+            </p>
+
+            <p id="ultima-modificacao"></p>
+
+        </div>
+
     </footer>
+
 </body>
 
 </html>
