@@ -26,8 +26,6 @@ const desafios = [
 ];
 
 const desafioSelecionado = document.querySelector("#produto");
-const anoAtual = document.querySelector("#ano-atual");
-const ultimaModificacao = document.querySelector("#ultima-modificacao");
 
 function preencherDesafios() {
   if (!desafioSelecionado) {
@@ -44,16 +42,4 @@ function preencherDesafios() {
   });
 }
 
-function atualizarRodape() {
-  if (anoAtual) {
-    anoAtual.textContent = `${new Date().getFullYear()}`;
-  }
-
-  if (ultimaModificacao) {
-    ultimaModificacao.textContent =
-      `Última modificação: ${document.lastModified}`;
-  }
-}
-
 preencherDesafios();
-atualizarRodape();
