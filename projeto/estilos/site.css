@@ -586,3 +586,75 @@ a {
     padding: 5.5rem 0;
   }
 }
+
+.acoes-enigma {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.botao-resposta,
+.botao-favorito {
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--fonte-corpo);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.botao-resposta {
+  border: 2px solid var(--cor-primaria);
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+
+.botao-favorito {
+  border: 2px solid var(--cor-secundaria);
+  background-color: var(--cor-superficie);
+  color: #8a6300;
+}
+
+.botao-resposta:hover,
+.botao-favorito:hover {
+  transform: translateY(-2px);
+}
+
+.botao-resposta:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
+}
+
+.botao-favorito:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
+}
+
+.botao-resposta:focus,
+.botao-favorito:focus {
+  outline: 3px solid var(--cor-secundaria);
+  outline-offset: 3px;
+}
+
+.botao-favorito[aria-pressed="true"] {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
+}
+
+.mensagem-vazia {
+  grid-column: 1 / -1;
+  margin: 0 auto;
+  padding: 1.2rem 1.5rem;
+  border: 1px dashed var(--cor-borda);
+  border-radius: 8px;
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  font-weight: 600;
+  text-align: center;
+}
