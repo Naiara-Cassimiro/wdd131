@@ -7,63 +7,126 @@
 
   <title>Avaliação Enviada | Enigma Clube</title>
 
-  <meta name="description" content="Confirmação de envio da revisão de produto realizada no site Enigma Clube.">
+  <meta name="description"
+    content="Confirmação de avaliação enviada com sucesso no Enigma Clube, projeto da disciplina WDD 131.">
+
   <meta name="author" content="Naiara Cassimiro">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
     rel="stylesheet">
 
+  <link rel="stylesheet" href="estilos/site.css">
   <link rel="stylesheet" href="estilos/formulario.css">
 
+  <script src="scripts/site.js" defer></script>
   <script src="scripts/avaliacao.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <img src="imagem/logo-enigma.webp" alt="Logotipo do Enigma Clube" class="logo">
 
-    <h1>Avaliação Enviada</h1>
+  <header class="cabecalho-principal">
+    <div class="cabecalho-conteudo">
 
-    <p>Enigma Clube</p>
+      <a href="index.html" class="marca" aria-label="Página inicial do Enigma Clube">
+        <img src="imagem/logo-enigma.webp" alt="Logotipo do Enigma Clube" class="logo" width="120" height="120">
+      </a>
+
+      <button type="button" class="botao-menu" id="botao-menu" aria-label="Abrir menu de navegação"
+        aria-expanded="false" aria-controls="menu-principal">
+        ☰
+      </button>
+
+      <nav id="menu-principal" class="navegacao-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="enigmas.html">Enigmas</a></li>
+          <li><a href="formulario.html">Avaliar</a></li>
+        </ul>
+      </nav>
+
+    </div>
   </header>
 
   <main>
-    <div class="cartao confirmacao">
-      <p class="icone" aria-hidden="true">✅</p>
 
-      <h2>Obrigado pela sua avaliação!</h2>
+    <section class="cabecalho-pagina">
+      <div class="cabecalho-pagina-conteudo">
 
-      <p>
-        Sua opinião foi registrada com sucesso e ajuda outros membros do
-        Enigma Clube a escolherem melhor seus produtos.
-      </p>
+        <p class="secao-destaque">Avaliação registrada</p>
 
-      <p class="contador">
-        Você já enviou
-        <span id="contador-avaliacoes">0</span>
-        avaliação(ões) neste navegador.
-      </p>
+        <h1>Obrigado pela sua opinião!</h1>
 
-      <p>
-        <a href="formulario.html">
-          &larr; Avaliar outro produto
-        </a>
-      </p>
-    </div>
+        <p>
+          Sua participação ajuda a tornar o Enigma Clube
+          cada vez mais interessante e útil para seus visitantes.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="titulo-confirmacao">
+
+      <div class="cartao confirmacao">
+
+        <h2 id="titulo-confirmacao">
+          Avaliação enviada com sucesso
+        </h2>
+
+        <p>
+          Sua opinião foi registrada e contribui para melhorar
+          os desafios, a navegação e a experiência no Enigma Clube.
+        </p>
+
+        <p class="contador">
+          Você já enviou
+          <span id="contador-avaliacoes">0</span>
+          avaliação(ões) neste navegador.
+        </p>
+
+        <p>
+          <a href="formulario.html">
+            &larr; Enviar outra avaliação
+          </a>
+        </p>
+
+        <p>
+          <a href="enigmas.html">
+            Voltar aos enigmas
+          </a>
+        </p>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <footer>
-    <p>
-      &copy; <span id="ano-atual"></span> |
-      Naiara Cassimiro | Brasil
-    </p>
+  <footer class="rodape-principal">
 
-    <p id="ultima-modificacao"></p>
+    <div class="rodape-conteudo">
+
+      <p>
+        &copy;
+        <span id="ano-atual"></span>
+        Enigma Clube | Naiara Cassimiro | WDD 131
+      </p>
+
+      <p>
+        <a href="referencias.html">
+          Referências
+        </a>
+      </p>
+
+      <p id="ultima-modificacao"></p>
+
+    </div>
+
   </footer>
+
 </body>
 
 </html>
