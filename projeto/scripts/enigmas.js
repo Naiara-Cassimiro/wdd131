@@ -56,10 +56,33 @@ const enigmas = [
 ];
 
 const listaEnigmas = document.querySelector("#lista-enigmas");
+const listaFavoritos = document.querySelector("#lista-favoritos");
 const filtroCategoria = document.querySelector("#filtro-categoria");
 const resultadoFiltro = document.querySelector("#resultado-filtro");
 
-function criarCartao(enigma) {
+function obterFavoritos() {
+  const favoritosSalvos = localStorage.getItem("enigmasFavoritos");
+
+  if (favoritosSalvos) {
+    return JSON.parse(favoritosSalvos);
+  }
+
+  return [];
+}
+
+function salvarFavoritos(favoritos) {
+  localStorage.setItem("enigmasFavoritos", JSON.stringify(favoritos));
+}
+
+function estaFavoritado(id) {
+  const favoritos = obterFavoritos();
+
+  return favoritos.includes(id);
+}
+
+function criarCartao(enigma, mostrarBotaoFavorito = true) {
+  const favorito = estaFavoritado(enigma.id);
+
   return `
     <article class="cartao-enigma">
       <div class="cartao-enigma-topo">
@@ -71,14 +94,31 @@ function criarCartao(enigma) {
 
       <p>${enigma.pergunta}</p>
 
-      <button
-        type="button"
-        class="botao-resposta"
-        data-id="${enigma.id}"
-        aria-expanded="false"
-      >
-        Mostrar resposta
-      </button>
+      <div class="acoes-enigma">
+        <button
+          type="button"
+          class="botao-resposta"
+          data-id="${enigma.id}"
+          aria-expanded="false"
+        >
+          Mostrar resposta
+        </button>
+
+        ${
+          mostrarBotaoFavorito
+            ? `
+              <button
+                type="button"
+                class="botao-favorito"
+                data-id="${enigma.id}"
+                aria-pressed="${favorito}"
+              >
+                ${favorito ? `★ Favoritado` : `☆ Favoritar`}
+              </button>
+            `
+            : ``
+        }
+      </div>
 
       <p
         class="resposta-enigma"
@@ -98,6 +138,28 @@ function exibirEnigmas(lista) {
 
   resultadoFiltro.textContent =
     `${lista.length} desafio(s) encontrado(s).`;
+}
+
+function exibirFavoritos() {
+  const favoritos = obterFavoritos();
+
+  const enigmasFavoritos = enigmas.filter(
+    (enigma) => favoritos.includes(enigma.id)
+  );
+
+  if (enigmasFavoritos.length === 0) {
+    listaFavoritos.innerHTML = `
+      <p class="mensagem-vazia">
+        Você ainda não adicionou nenhum enigma aos favoritos.
+      </p>
+    `;
+
+    return;
+  }
+
+  listaFavoritos.innerHTML = enigmasFavoritos
+    .map((enigma) => criarCartao(enigma, false))
+    .join(``);
 }
 
 function filtrarEnigmas() {
@@ -123,7 +185,6 @@ function alternarResposta(evento) {
 
   const id = botao.dataset.id;
   const resposta = document.querySelector(`#resposta-${id}`);
-
   const estaOculta = resposta.hidden;
 
   resposta.hidden = !estaOculta;
@@ -136,7 +197,40 @@ function alternarResposta(evento) {
   }
 }
 
+function alternarFavorito(evento) {
+  const botao = evento.target.closest(".botao-favorito");
+
+  if (!botao) {
+    return;
+  }
+
+  const id = Number(botao.dataset.id);
+  const favoritos = obterFavoritos();
+
+  let novosFavoritos;
+
+  if (favoritos.includes(id)) {
+    novosFavoritos = favoritos.filter(
+      (favoritoId) => favoritoId !== id
+    );
+  } else {
+    novosFavoritos = [...favoritos, id];
+  }
+
+  salvarFavoritos(novosFavoritos);
+
+  filtrarEnigmas();
+  exibirFavoritos();
+}
+
 filtroCategoria.addEventListener("change", filtrarEnigmas);
-listaEnigmas.addEventListener("click", alternarResposta);
+
+listaEnigmas.addEventListener("click", (evento) => {
+  alternarResposta(evento);
+  alternarFavorito(evento);
+});
+
+listaFavoritos.addEventListener("click", alternarResposta);
 
 exibirEnigmas(enigmas);
+exibirFavoritos();
