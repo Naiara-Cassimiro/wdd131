@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enigma Clube | Desafios, Lógica e Mistério</title>
+
+    <meta name="description"
+        content="Enigma Clube: desafios de lógica, charadas, cifras e enigmas visuais para quem gosta de raciocínio, mistério e diversão.">
+
+    <meta name="author" content="Naiara Cassimiro">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/site.css">
+
+    <script src="scripts/site.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="cabecalho-conteudo">
+
+            <a href="index.html" class="marca" aria-label="Página inicial do Enigma Clube">
+                <img src="imagem/logo-enigma.webp" alt="Logotipo do Enigma Clube" class="logo" width="120" height="120">
+            </a>
+
+            <button type="button" class="botao-menu" id="botao-menu" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="menu-principal">
+                ☰
+            </button>
+
+            <nav id="menu-principal" class="navegacao-principal" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Início</a></li>
+                    <li><a href="enigmas.html">Enigmas</a></li>
+                    <li><a href="formulario.html">Avaliar</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-conteudo">
+
+                <p class="hero-destaque">Desafie sua mente</p>
+
+                <h1>Bem-vindo ao Enigma Clube</h1>
+
+                <p>
+                    Um espaço para quem gosta de lógica, mistério, charadas,
+                    cifras e desafios que colocam o raciocínio à prova.
+                </p>
+
+                <a href="enigmas.html" class="botao-principal">
+                    Explorar enigmas
+                </a>
+
+            </div>
+        </section>
+
+        <section class="secao apresentacao" aria-labelledby="titulo-sobre">
+
+            <div class="secao-cabecalho">
+                <p class="secao-destaque">Descubra, pense e resolva</p>
+                <h2 id="titulo-sobre">O que é o Enigma Clube?</h2>
+            </div>
+
+            <p>
+                O Enigma Clube reúne desafios para pessoas que gostam de testar
+                o raciocínio e encontrar soluções criativas. Aqui você poderá
+                explorar diferentes tipos de enigmas, descobrir novos desafios
+                e acompanhar aqueles que mais chamaram sua atenção.
+            </p>
+
+        </section>
+
+        <section class="secao categorias" aria-labelledby="titulo-categorias">
+
+            <div class="secao-cabecalho">
+                <p class="secao-destaque">Escolha seu desafio</p>
+                <h2 id="titulo-categorias">Categorias de Enigmas</h2>
+            </div>
+
+            <div class="grade-categorias">
+
+                <article class="cartao-categoria">
+                    <div class="icone-categoria" aria-hidden="true">🧠</div>
+                    <h3>Lógica</h3>
+                    <p>
+                        Problemas que exigem atenção, dedução e pensamento estratégico.
+                    </p>
+                </article>
+
+                <article class="cartao-categoria">
+                    <div class="icone-categoria" aria-hidden="true">❓</div>
+                    <h3>Charadas</h3>
+                    <p>
+                        Perguntas criativas em que a resposta pode estar escondida
+                        nos pequenos detalhes.
+                    </p>
+                </article>
+
+                <article class="cartao-categoria">
+                    <div class="icone-categoria" aria-hidden="true">🔐</div>
+                    <h3>Cifras</h3>
+                    <p>
+                        Mensagens secretas e códigos para quem gosta de desvendar
+                        padrões e pistas.
+                    </p>
+                </article>
+
+                <article class="cartao-categoria">
+                    <div class="icone-categoria" aria-hidden="true">🧩</div>
+                    <h3>Enigmas Visuais</h3>
+                    <p>
+                        Desafios em que observar cuidadosamente pode ser a chave
+                        para encontrar a solução.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="secao destaque-enigma" aria-labelledby="titulo-destaque">
+
+            <div class="secao-cabecalho">
+                <p class="secao-destaque">Teste rápido</p>
+                <h2 id="titulo-destaque">Enigma em Destaque</h2>
+            </div>
+
+            <article class="cartao-destaque">
+                <p class="nivel-enigma">Nível: Fácil</p>
+
+                <h3>Quanto mais você tira, maior ele fica. O que é?</h3>
+
+                <p>
+                    Pense antes de conferir a resposta. A solução pode estar
+                    mais próxima do que você imagina.
+                </p>
+
+                <a href="enigmas.html" class="botao-secundario">
+                    Ver mais desafios
+                </a>
+            </article>
+
+        </section>
+
+        <section class="secao chamada-final" aria-labelledby="titulo-chamada">
+
+            <h2 id="titulo-chamada">Pronto para começar?</h2>
+
+            <p>
+                Explore os desafios disponíveis e descubra quais enigmas combinam
+                mais com o seu jeito de pensar.
+            </p>
+
+            <a href="enigmas.html" class="botao-principal">
+                Ir para os enigmas
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape-principal">
+
+        <div class="rodape-conteudo">
+
+            <p>
+                &copy; <span id="ano-atual"></span>
+                Enigma Clube | Naiara Cassimiro | WDD 131
+            </p>
+
+            <p>
+                <a href="referencias.html">Referências</a>
+            </p>
+
+            <p id="ultima-modificacao"></p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
