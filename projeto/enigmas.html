@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enigmas | Enigma Clube</title>
+
+    <meta name="description"
+        content="Explore desafios de lógica, charadas, cifras e enigmas visuais no Enigma Clube e coloque seu raciocínio à prova.">
+
+    <meta name="author" content="Naiara Cassimiro">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/site.css">
+
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/enigmas.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="cabecalho-conteudo">
+
+            <a href="index.html" class="marca" aria-label="Página inicial do Enigma Clube">
+                <img src="imagem/logo-enigma.webp" alt="Logotipo do Enigma Clube" class="logo" width="120" height="120">
+            </a>
+
+            <button type="button" class="botao-menu" id="botao-menu" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="menu-principal">
+                ☰
+            </button>
+
+            <nav id="menu-principal" class="navegacao-principal" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="enigmas.html" aria-current="page">Enigmas</a></li>
+                    <li><a href="formulario.html">Avaliar</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="cabecalho-pagina">
+            <div class="cabecalho-pagina-conteudo">
+
+                <p class="secao-destaque">Desafie seu raciocínio</p>
+
+                <h1>Explore nossos enigmas</h1>
+
+                <p>
+                    Escolha uma categoria, encontre um desafio e tente descobrir
+                    a resposta antes de revelar a solução.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="secao area-enigmas" aria-labelledby="titulo-desafios">
+
+            <div class="secao-cabecalho">
+                <p class="secao-destaque">Escolha seu desafio</p>
+                <h2 id="titulo-desafios">Desafios disponíveis</h2>
+            </div>
+
+            <div class="filtros">
+
+                <label for="filtro-categoria">
+                    Filtrar por categoria
+                </label>
+
+                <select id="filtro-categoria" name="categoria">
+                    <option value="todos">Todos</option>
+                    <option value="logica">Lógica</option>
+                    <option value="charadas">Charadas</option>
+                    <option value="cifras">Cifras</option>
+                    <option value="visuais">Enigmas Visuais</option>
+                </select>
+
+            </div>
+
+            <p id="resultado-filtro" class="resultado-filtro" aria-live="polite"></p>
+
+            <div id="lista-enigmas" class="grade-enigmas"></div>
+
+        </section>
+
+        <section class="secao favoritos" aria-labelledby="titulo-favoritos">
+
+            <div class="secao-cabecalho">
+                <p class="secao-destaque">Sua seleção</p>
+                <h2 id="titulo-favoritos">Meus Favoritos</h2>
+            </div>
+
+            <p>
+                Marque os desafios de que mais gostar. Seus favoritos ficarão
+                armazenados neste navegador para você encontrá-los novamente.
+            </p>
+
+            <div id="lista-favoritos" class="grade-enigmas"></div>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape-principal">
+
+        <div class="rodape-conteudo">
+
+            <p>
+                &copy; <span id="ano-atual"></span>
+                Enigma Clube | Naiara Cassimiro | WDD 131
+            </p>
+
+            <p>
+                <a href="referencias.html">Referências</a>
+            </p>
+
+            <p id="ultima-modificacao"></p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
