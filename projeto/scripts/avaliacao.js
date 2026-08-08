@@ -3,29 +3,23 @@ function obterContador() {
 }
 
 function salvarContador(valor) {
-  localStorage.setItem("contadorAvaliacoes", String(valor));
+  localStorage.setItem("contadorAvaliacoes", `${valor}`);
 }
 
-function atualizarRodape() {
-  const anoAtual = document.querySelector("#ano-atual");
-  const ultimaModificacao = document.querySelector("#ultima-modificacao");
+function atualizarContador() {
+  const contadorAvaliacoes = document.querySelector(
+    "#contador-avaliacoes"
+  );
 
-  if (anoAtual) {
-    anoAtual.textContent = new Date().getFullYear();
+  if (!contadorAvaliacoes) {
+    return;
   }
 
-  if (ultimaModificacao) {
-    ultimaModificacao.textContent = `Última modificação: ${document.lastModified}`;
-  }
+  const novoTotal = obterContador() + 1;
+
+  salvarContador(novoTotal);
+
+  contadorAvaliacoes.textContent = `${novoTotal}`;
 }
 
-const contadorAvaliacoes = document.querySelector("#contador-avaliacoes");
-const novoTotal = obterContador() + 1;
-
-salvarContador(novoTotal);
-
-if (contadorAvaliacoes) {
-  contadorAvaliacoes.textContent = novoTotal;
-}
-
-atualizarRodape();
+atualizarContador();
