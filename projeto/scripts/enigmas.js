@@ -84,51 +84,65 @@ function criarCartao(enigma, mostrarBotaoFavorito = true) {
   const favorito = estaFavoritado(enigma.id);
 
   return `
-    <article class="cartao-enigma">
-      <div class="cartao-enigma-topo">
-        <span class="categoria-enigma">${enigma.categoriaNome}</span>
-        <span class="dificuldade-enigma">${enigma.dificuldade}</span>
-      </div>
+  <article class="cartao-enigma">
+    <div class="cartao-enigma-topo">
+      <span class="categoria-enigma">${enigma.categoriaNome}</span>
+      <span class="dificuldade-enigma">${enigma.dificuldade}</span>
+    </div>
 
-      <h3>${enigma.titulo}</h3>
+    <h3>${enigma.titulo}</h3>
 
-      <p>${enigma.pergunta}</p>
+    <p class="pergunta-enigma">${enigma.pergunta}</p>
 
-      <div class="acoes-enigma">
-        <button
-          type="button"
-          class="botao-resposta"
-          data-id="${enigma.id}"
-          aria-expanded="false"
-        >
-          Mostrar resposta
-        </button>
+    <div class="campo-resposta">
+      <label for="tentativa-${enigma.id}">
+        Sua resposta
+      </label>
 
-        ${
-          mostrarBotaoFavorito
-            ? `
-              <button
-                type="button"
-                class="botao-favorito"
-                data-id="${enigma.id}"
-                aria-pressed="${favorito}"
-              >
-                ${favorito ? `★ Favoritado` : `☆ Favoritar`}
-              </button>
-            `
-            : ``
-        }
-      </div>
-
-      <p
-        class="resposta-enigma"
-        id="resposta-${enigma.id}"
-        hidden
+      <input
+        type="text"
+        id="tentativa-${enigma.id}"
+        class="entrada-resposta"
+        placeholder="Digite sua resposta aqui..."
+        autocomplete="off"
       >
-        <strong>Resposta:</strong> ${enigma.resposta}
-      </p>
-    </article>
-  `;
+    </div>
+
+    <div class="acoes-enigma">
+      <button
+        type="button"
+        class="botao-resposta"
+        data-id="${enigma.id}"
+        aria-expanded="false"
+      >
+        Mostrar resposta
+      </button>
+
+      ${
+        mostrarBotaoFavorito
+          ? `
+            <button
+              type="button"
+              class="botao-favorito"
+              data-id="${enigma.id}"
+              aria-pressed="${favorito}"
+            >
+              ${favorito ? `★ Favoritado` : `☆ Favoritar`}
+            </button>
+          `
+          : ``
+      }
+    </div>
+
+    <p
+      class="resposta-enigma"
+      id="resposta-${enigma.id}"
+      hidden
+    >
+      <strong>Resposta:</strong> ${enigma.resposta}
+    </p>
+  </article>
+`;
 }
 
 function exibirEnigmas(lista) {
