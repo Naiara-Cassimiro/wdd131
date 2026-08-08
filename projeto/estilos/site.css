@@ -400,14 +400,14 @@ a {
 .grade-enigmas {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .cartao-enigma {
   display: flex;
   flex-direction: column;
-  min-height: 310px;
-  padding: 1.5rem;
+  min-height: 380px;
+  padding: 1.8rem;
   border: 1px solid var(--cor-borda);
   border-top: 4px solid var(--cor-secundaria);
   border-radius: 10px;
