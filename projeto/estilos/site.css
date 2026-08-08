@@ -369,6 +369,10 @@ a {
     flex-wrap: nowrap;
   }
 
+  .grade-enigmas {
+  grid-template-columns: repeat(2, 1fr);
+}
+
   .logo {
     width: 105px;
   }
@@ -403,7 +407,13 @@ a {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .grade-enigmas {
+  grid-template-columns: repeat(3, 1fr);
+}
+
   .hero-conteudo {
     padding: 5.5rem 0;
   }
 }
+
+
