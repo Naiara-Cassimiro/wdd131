@@ -1,46 +1,59 @@
-const produtos = [
+const desafios = [
   {
-    id: "enigma-logico",
-    nome: "Enigma Lógico"
+    id: "o-buraco",
+    nome: "O Buraco"
   },
   {
-    id: "charada-misteriosa",
-    nome: "Charada Misteriosa"
+    id: "tres-interruptores",
+    nome: "Os Três Interruptores"
   },
   {
-    id: "desafio-de-cifras",
-    nome: "Desafio de Cifras"
+    id: "mensagem-secreta",
+    nome: "Mensagem Secreta"
   },
   {
-    id: "quebra-cabeca-visual",
-    nome: "Quebra-Cabeça Visual"
+    id: "a-familia",
+    nome: "A Família"
   },
   {
-    id: "desafio-semanal",
-    nome: "Desafio Semanal"
+    id: "o-que-tem-cidades",
+    nome: "O que tem cidades?"
+  },
+  {
+    id: "observe-a-sequencia",
+    nome: "Observe a Sequência"
   }
 ];
 
-const produtoSelecionado = document.querySelector("#produto");
+const desafioSelecionado = document.querySelector("#produto");
 const anoAtual = document.querySelector("#ano-atual");
 const ultimaModificacao = document.querySelector("#ultima-modificacao");
 
-if (produtoSelecionado) {
-  produtos.forEach((produto) => {
+function preencherDesafios() {
+  if (!desafioSelecionado) {
+    return;
+  }
+
+  desafios.forEach((desafio) => {
     const option = document.createElement("option");
 
-    option.value = produto.id;
-    option.textContent = produto.nome;
+    option.value = desafio.id;
+    option.textContent = desafio.nome;
 
-    produtoSelecionado.appendChild(option);
+    desafioSelecionado.appendChild(option);
   });
 }
 
-if (anoAtual) {
-  anoAtual.textContent = new Date().getFullYear();
+function atualizarRodape() {
+  if (anoAtual) {
+    anoAtual.textContent = `${new Date().getFullYear()}`;
+  }
+
+  if (ultimaModificacao) {
+    ultimaModificacao.textContent =
+      `Última modificação: ${document.lastModified}`;
+  }
 }
 
-if (ultimaModificacao) {
-  ultimaModificacao.textContent =
-    `Última modificação: ${document.lastModified}`;
-}
+preencherDesafios();
+atualizarRodape();
