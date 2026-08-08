@@ -19,7 +19,10 @@ function atualizarContador() {
 
   salvarContador(novoTotal);
 
-  contadorAvaliacoes.textContent = `${novoTotal}`;
+  contadorAvaliacoes.textContent =
+  novoTotal === 1
+    ? `${novoTotal} avaliação`
+    : `${novoTotal} avaliações`;
 }
 
 atualizarContador();
