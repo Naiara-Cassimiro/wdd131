@@ -406,7 +406,7 @@ a {
 .cartao-enigma {
   display: flex;
   flex-direction: column;
-  min-height: 380px;
+  min-height: 480px;
   padding: 1.8rem;
   border: 1px solid var(--cor-borda);
   border-top: 4px solid var(--cor-secundaria);
