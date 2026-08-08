@@ -641,6 +641,29 @@ a {
   color: var(--cor-texto-claro);
 }
 
+.lista-referencias {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.referencia-item {
+  padding: 1.5rem;
+  border: 1px solid var(--cor-borda);
+  border-left: 4px solid var(--cor-secundaria);
+  border-radius: 8px;
+  background-color: var(--cor-superficie);
+}
+
+.referencia-item h3 {
+  margin: 0 0 0.5rem;
+  color: var(--cor-primaria);
+  font-family: var(--fonte-titulos);
+}
+
+.referencia-item p {
+  margin: 0;
+}
+
 /* =========================
    RESPONSIVIDADE
    ========================= */
