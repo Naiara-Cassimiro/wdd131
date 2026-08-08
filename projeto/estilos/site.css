@@ -478,10 +478,42 @@ a {
   font-size: 0.95rem;
 }
 
-.entrada-resposta:focus {
-  border-color: var(--cor-secundaria);
-  outline: 3px solid var(--cor-destaque-suave);
-  outline-offset: 2px;
+.botao-verificar {
+  width: 100%;
+  min-height: 44px;
+  margin-bottom: 0.8rem;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--cor-secundaria);
+  border-radius: 6px;
+  background-color: var(--cor-destaque-suave);
+  color: var(--cor-primaria);
+  cursor: pointer;
+  font-family: var(--fonte-corpo);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.botao-verificar:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
+  transform: translateY(-2px);
+}
+
+.botao-verificar:focus {
+  outline: 3px solid var(--cor-secundaria);
+  outline-offset: 3px;
+}
+
+.feedback-resposta {
+  min-height: 1.5rem;
+  margin: 0 0 0.8rem;
+  color: var(--cor-primaria);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .acoes-enigma {
