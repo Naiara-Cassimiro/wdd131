@@ -6,6 +6,7 @@ const enigmas = [
     categoriaNome: "Charadas",
     dificuldade: "Fácil",
     pergunta: "Quanto mais você tira, maior ele fica. O que é?",
+    respostaCurta: "buraco",
     resposta: "Um buraco."
   },
   {
@@ -15,6 +16,7 @@ const enigmas = [
     categoriaNome: "Lógica",
     dificuldade: "Médio",
     pergunta: "Há três interruptores fora de uma sala e apenas um controla a lâmpada dentro dela. Você pode entrar na sala apenas uma vez. Como descobrir qual interruptor controla a lâmpada?",
+    respostaCurta: "segundo",
     resposta: "Ligue o primeiro interruptor por alguns minutos e depois desligue-o. Ligue o segundo e entre na sala. Se a lâmpada estiver acesa, é o segundo. Se estiver apagada e quente, é o primeiro. Se estiver apagada e fria, é o terceiro."
   },
   {
@@ -24,6 +26,7 @@ const enigmas = [
     categoriaNome: "Cifras",
     dificuldade: "Médio",
     pergunta: "Se cada letra foi substituída pela próxima letra do alfabeto, qual palavra está escondida em D B T B?",
+    respostaCurta: "casa",
     resposta: "CASA. Para descobrir, volte uma posição no alfabeto para cada letra."
   },
   {
@@ -33,6 +36,7 @@ const enigmas = [
     categoriaNome: "Lógica",
     dificuldade: "Fácil",
     pergunta: "Dois pais e dois filhos foram passear, mas havia apenas três pessoas. Como isso é possível?",
+    respostaCurta: "avô, pai e filho",
     resposta: "Eram três gerações: avô, pai e filho."
   },
   {
@@ -42,6 +46,7 @@ const enigmas = [
     categoriaNome: "Charadas",
     dificuldade: "Fácil",
     pergunta: "O que tem cidades, mas não tem casas; tem montanhas, mas não tem árvores; e tem água, mas não tem peixes?",
+    respostaCurta: "mapa",
     resposta: "Um mapa."
   },
   {
@@ -51,6 +56,7 @@ const enigmas = [
     categoriaNome: "Enigmas Visuais",
     dificuldade: "Médio",
     pergunta: "Observe a sequência: ▲ ● ▲ ● ▲ __. Qual símbolo deve ocupar o espaço vazio?",
+    respostaCurta: "●",
     resposta: "●. Os símbolos alternam entre triângulo e círculo."
   }
 ];
@@ -80,74 +86,102 @@ function estaFavoritado(id) {
   return favoritos.includes(id);
 }
 
-function criarCartao(enigma, mostrarBotaoFavorito = true) {
+function criarCartao(
+  enigma,
+  mostrarBotaoFavorito = true,
+  contexto = "principal"
+) {
   const favorito = estaFavoritado(enigma.id);
 
   return `
-  <article class="cartao-enigma">
-    <div class="cartao-enigma-topo">
-      <span class="categoria-enigma">${enigma.categoriaNome}</span>
-      <span class="dificuldade-enigma">${enigma.dificuldade}</span>
-    </div>
+    <article class="cartao-enigma">
+      <div class="cartao-enigma-topo">
+        <span class="categoria-enigma">
+          ${enigma.categoriaNome}
+        </span>
 
-    <h3>${enigma.titulo}</h3>
+        <span class="dificuldade-enigma">
+          ${enigma.dificuldade}
+        </span>
+      </div>
 
-    <p class="pergunta-enigma">${enigma.pergunta}</p>
+      <h3>${enigma.titulo}</h3>
 
-    <div class="campo-resposta">
-      <label for="tentativa-${enigma.id}">
-        Sua resposta
-      </label>
+      <p class="pergunta-enigma">
+        ${enigma.pergunta}
+      </p>
 
-      <input
-        type="text"
-        id="tentativa-${enigma.id}"
-        class="entrada-resposta"
-        placeholder="Digite sua resposta aqui..."
-        autocomplete="off"
-      >
-    </div>
+      <div class="campo-resposta">
+        <label for="tentativa-${contexto}-${enigma.id}">
+          Sua resposta
+        </label>
 
-    <div class="acoes-enigma">
+        <input
+          type="text"
+          id="tentativa-${contexto}-${enigma.id}"
+          class="entrada-resposta"
+          placeholder="Digite sua resposta aqui..."
+          autocomplete="off"
+        >
+      </div>
+
       <button
         type="button"
-        class="botao-resposta"
+        class="botao-verificar"
         data-id="${enigma.id}"
-        aria-expanded="false"
+        data-contexto="${contexto}"
       >
-        Mostrar resposta
+        Verificar resposta
       </button>
 
-      ${
-        mostrarBotaoFavorito
-          ? `
-            <button
-              type="button"
-              class="botao-favorito"
-              data-id="${enigma.id}"
-              aria-pressed="${favorito}"
-            >
-              ${favorito ? `★ Favoritado` : `☆ Favoritar`}
-            </button>
-          `
-          : ``
-      }
-    </div>
+      <p
+        class="feedback-resposta"
+        id="feedback-${contexto}-${enigma.id}"
+        aria-live="polite"
+      ></p>
 
-    <p
-      class="resposta-enigma"
-      id="resposta-${enigma.id}"
-      hidden
-    >
-      <strong>Resposta:</strong> ${enigma.resposta}
-    </p>
-  </article>
-`;
+      <div class="acoes-enigma">
+        <button
+          type="button"
+          class="botao-resposta"
+          data-id="${enigma.id}"
+          data-contexto="${contexto}"
+          aria-expanded="false"
+        >
+          Mostrar resposta
+        </button>
+
+        ${
+          mostrarBotaoFavorito
+            ? `
+              <button
+                type="button"
+                class="botao-favorito"
+                data-id="${enigma.id}"
+                aria-pressed="${favorito}"
+              >
+                ${favorito ? `★ Favoritado` : `☆ Favoritar`}
+              </button>
+            `
+            : ``
+        }
+      </div>
+
+      <p
+        class="resposta-enigma"
+        id="resposta-${contexto}-${enigma.id}"
+        hidden
+      >
+        <strong>Resposta:</strong>
+        ${enigma.resposta}
+      </p>
+    </article>
+  `;
 }
 
 function exibirEnigmas(lista) {
   listaEnigmas.innerHTML = lista
-    .map((enigma) => criarCartao(enigma))
+    .map((enigma) => criarCartao(enigma, true, "principal"))
     .join(``);
 
   resultadoFiltro.textContent =
@@ -172,14 +206,14 @@ function exibirFavoritos() {
   }
 
   listaFavoritos.innerHTML = enigmasFavoritos
-    .map((enigma) => criarCartao(enigma, false))
+    .map((enigma) => criarCartao(enigma, false, "favorito"))
     .join(``);
 }
 
 function filtrarEnigmas() {
   const categoriaSelecionada = filtroCategoria.value;
 
-  if (categoriaSelecionada === `todos`) {
+  if (categoriaSelecionada === "todos") {
     exibirEnigmas(enigmas);
   } else {
     const enigmasFiltrados = enigmas.filter(
@@ -198,7 +232,12 @@ function alternarResposta(evento) {
   }
 
   const id = botao.dataset.id;
-  const resposta = document.querySelector(`#resposta-${id}`);
+  const contexto = botao.dataset.contexto;
+
+  const resposta = document.querySelector(
+    `#resposta-${contexto}-${id}`
+  );
+
   const estaOculta = resposta.hidden;
 
   resposta.hidden = !estaOculta;
@@ -208,6 +247,48 @@ function alternarResposta(evento) {
     botao.textContent = `Ocultar resposta`;
   } else {
     botao.textContent = `Mostrar resposta`;
+  }
+}
+
+function verificarResposta(evento) {
+  const botao = evento.target.closest(".botao-verificar");
+
+  if (!botao) {
+    return;
+  }
+
+  const id = Number(botao.dataset.id);
+  const contexto = botao.dataset.contexto;
+
+  const enigma = enigmas.find(
+    (item) => item.id === id
+  );
+
+  const campo = document.querySelector(
+    `#tentativa-${contexto}-${id}`
+  );
+
+  const feedback = document.querySelector(
+    `#feedback-${contexto}-${id}`
+  );
+
+  const tentativa = campo.value
+    .trim()
+    .toLowerCase();
+
+  if (tentativa === "") {
+    feedback.textContent =
+      `Digite uma resposta antes de verificar.`;
+
+    return;
+  }
+
+  if (tentativa === enigma.respostaCurta.toLowerCase()) {
+    feedback.textContent =
+      `✓ Correto! Muito bem!`;
+  } else {
+    feedback.textContent =
+      `Ainda não. Tente novamente ou revele a resposta.`;
   }
 }
 
@@ -237,14 +318,21 @@ function alternarFavorito(evento) {
   exibirFavoritos();
 }
 
-filtroCategoria.addEventListener("change", filtrarEnigmas);
+filtroCategoria.addEventListener(
+  "change",
+  filtrarEnigmas
+);
 
 listaEnigmas.addEventListener("click", (evento) => {
   alternarResposta(evento);
   alternarFavorito(evento);
+  verificarResposta(evento);
 });
 
-listaFavoritos.addEventListener("click", alternarResposta);
+listaFavoritos.addEventListener("click", (evento) => {
+  alternarResposta(evento);
+  verificarResposta(evento);
+});
 
 exibirEnigmas(enigmas);
 exibirFavoritos();
